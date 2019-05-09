@@ -1,0 +1,31 @@
+<?php
+$type = new Model('type');
+//查询所有高级分类
+$types = $type->where('pid=0')->select();
+$son = $type->where("pid<>0")->select();
+//查询所有子类
+?>
+                <div class="header-bottom center">
+                    <ul class="list-no">
+                        <li class="blog" style="width:185px;margin:0;border:none;"><a class="log" href="index.php?c=Home&a=index"></a></li>
+                        <li style="border:none;"><a href="index.php?c=Home&a=index">首页</a></li>
+                        <?php foreach($types as $k=>$v):?>
+
+                        <li><a href="T<?=$v['id']?>.html"><?="{$v['name']}"?></a>
+                            <ol class="fz">
+                            <?php foreach($son as $val):
+                                if($v['id']==$val['pid']){
+                            ?>
+                                   <li><a href="T<?=$val['id']?>.html"><?=$val['name']?></a></li>     
+                            
+                                
+                            <?php }endforeach;?>
+                            </ol>
+                        </li>
+                    <?php endforeach;?>
+                    </ul>
+                </div>
+
+
+
+

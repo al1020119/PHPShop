@@ -1,0 +1,63 @@
+<?php include './Public/header.html';
+//var_dump($arr);
+include './Public/nav.html';
+?>
+    
+    
+    <div class="row-fluid" id="main">
+        <div class="span8 offset2"> 
+            <form action="index.php?c=Orders&a=doSave" method="post" class="form-horizontal ">
+                <h3>修改订单基本信息</h3>
+                <input type="hidden" name="id" value="<?=$arr['id']?>">
+                <div class="control-group">
+                    <label class="control-label" for="Ordersname">用户名</label>
+                    <div class="controls">
+                        <input type="text" name="getman" id="getman" value="<?=$arr['getman']?>">
+                    </div>
+                </div>
+                
+
+                
+
+                
+
+                <div class="control-group">
+                    <label class="control-label" for="code">邮箱</label>
+                    <div class="controls">
+                        <input value="<?=$arr['code']?>" type="code" id="code" name="code" placeholder="邮箱">
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label" for="phone">手机号</label>
+                    <div class="controls">
+                        <input value="<?=$arr['phone']?>" type="number" id="phone" name="phone" placeholder="手机号">
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label" for="address">收货地址</label>
+                    <div class="controls">
+                        <textarea rows="3" name="address"><?=$arr['address']?> </textarea>
+                    </div>
+                </div>
+
+                
+
+                
+
+                <div class="control-group">
+                    <div class="controls">
+                        <label class="checkbox">
+                            &nbsp;
+                        </label>
+                        <button class="btn btn-large btn-primary form-submit" type="submit">&nbsp;&nbsp;提交&nbsp;&nbsp;</button>
+                        <a class="btn btn-large default form-submit" href="index.php?c=Orders&a=index">&nbsp;&nbsp;返回&nbsp;&nbsp;</a>
+                    </div>
+                </div>
+            </form>         
+        </div>
+    </div>
+    
+<?php include './Public/footer.html';?>
+    

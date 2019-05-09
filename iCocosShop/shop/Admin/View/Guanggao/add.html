@@ -1,0 +1,58 @@
+<?php include './Public/header.html';
+include './Public/nav.html';
+?>
+    
+    
+    <div class="row-fluid" id="main">
+        <div class="span8 offset2"> 
+            <form action="index.php?c=Guanggao&a=doAdd" method="post" class="form-horizontal " enctype="multipart/form-data">
+                <h3>广告添加</h3>
+                
+
+                <div class="control-group">
+                    <label class="control-label" for="name">广告名</label>
+                    <div class="controls">
+                        <input type="text" name="name" id="name" placeholder="广告名">
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label  class="control-label" for="file">广告图片</label>
+                    <div class="controls">
+                        <input type="file" id="file" name="pic" >
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label  class="control-label" for="orders">广告排序</label>
+                    <div class="controls">
+                        <input type="text" id="orders" name="orders" placeholder="广告排序" min=0>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label" for="link">广告链接</label>
+                    <div class="controls">
+                        <input type="text" name="link" id="link" placeholder="广告链接">
+                    </div>
+                </div>
+              
+         
+
+                
+
+                <div class="control-group">
+                    <div class="controls">
+                        <label class="checkbox">
+                            &nbsp;
+                        </label>
+                        <button class="btn btn-large btn-primary form-submit" type="submit">&nbsp;&nbsp;提交&nbsp;&nbsp;</button>
+                        <a class="btn btn-large default form-submit" href="index.php?c=Guanggao">&nbsp;&nbsp;返回&nbsp;&nbsp;</a>
+                    </div>
+                </div>
+            </form>         
+        </div>
+    </div>
+    
+<?php include './Public/footer.html';?>
+    

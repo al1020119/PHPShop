@@ -1,0 +1,280 @@
+*{margin:0;padding:0;font-family:'微软雅黑'; color:#333;font-size:12px;}
+.left{float:left;}
+.right{float:right;}
+.clear{clear:both;}
+a{text-decoration:none;}
+li{list-style:none;}
+body{
+    width:980px;
+    margin:0 auto;
+}
+.top{
+    border-bottom:1px solid #333;
+    margin-top:5px;
+}
+
+.help-center{
+    line-height:46px;
+    float:right;
+}
+.help-center a{
+    padding:0 5px;
+}
+.user{
+    color: #a10000;
+}
+.location{
+    background:url('../image/jr.gif');
+    background-position:0 -28px;
+    height:28px;
+    width:540px;
+    margin-top:10px;
+}
+.lc1{
+    color:#fff;
+}
+.lc{
+    display: inline-block;
+    font-weight: bold;
+    line-height: 28px;
+    text-align: center;
+    width: 170px;
+}
+table{
+    margin-top:10px;
+}
+
+ul{
+    margin-top:10px;
+}
+.adress{
+    background: #eeeeee;
+    width: 150px;
+    line-height: 180px;
+    display: inline-block;
+    text-align: center;
+    color: #000;
+    margin: 0px;
+    padding: 20px 0px;
+    height: auto;
+}
+.addadress{
+    height:220px;
+    float: right;
+    width: 825px;
+    margin: 0px;
+    border: 0 none;
+    background: #fff;
+}
+li{
+    border:1px solid #ccc;
+}
+.jia{
+    width: 230px;
+    height: 150px;
+    border:1px dashed #ccc;
+    margin:10px;
+    line-height:150px;
+    text-align:center;
+}
+.jia:hover{
+    border:1px dashed #a10000;
+}
+.jia span{
+    color:red;
+}
+li div h3{
+    font-size:16px;
+}
+.queren{
+    height: 100px;
+    width: 230px;
+    line-height:100px;
+    margin:30px 0 0 10px;
+    color:#ccc;
+}
+.peisong p{
+    margin-top:20px;
+}
+.show{
+    color:#a10000;
+}
+.peihuo{
+    background: #eeeeee;
+    width: 150px;
+    line-height: 245px;
+    display: inline-block;
+    text-align: center;
+    color: #000;
+    margin: 0px;
+    padding: 20px 0px;
+    height: auto;
+}
+.pay{
+    background: #eeeeee;
+    width: 150px;
+    line-height: 370px;
+    display: inline-block;
+    text-align: center;
+    color: #000;
+    margin: 0px;
+    padding: 20px 0px;
+    height: auto;
+}
+.mon{
+    height:102px;
+    margin-bottom:60px;
+}
+.yue{
+    font-weight: bold;
+    font-size:14px;
+}
+.first,.secend{
+    margin-left:20px;
+}
+.first a{
+    line-height: 40px;
+    color: #A10000;
+    margin-left: 20px;
+    border-bottom: 1px;
+    border-bottom-color: #A10000;
+    border-bottom-style: solid;
+}
+.secend a{
+    font-weight:600;
+    line-height: 40px;
+    color: #A10000;
+}
+.secend{
+    margin-top:30px;
+}
+.yes{
+    padding: 30px 0 15px 60px;
+}
+.fapiao{
+    padding: 15px 0 15px 20px;
+    cursor: pointer;
+    margin: 20px 0px 20px 0px;
+    border:1px solid #ccc;
+}
+.fapiao{
+    background:url('../image/jiahao.gif')no-repeat 0;
+}
+.shoplist{
+    padding: 15px 15px 10px 15px;
+    background: #eeeeee;
+    line-height: 10px;
+    overflow:hidden;
+}
+.shoplist a{
+    float:right;
+    color:#a10000;
+}
+.shoplist h3{
+    float:left;
+    font-size:15px;
+}
+.date{
+    color:#a10000;
+}
+h5{
+    line-height:34px;
+}
+.order1{
+    margin: 13px 0 7px;
+    padding-left: 15px;
+    font-weight:600;
+    font-size:16px;
+    margin-right:50px;
+}
+.s-name{  
+    background: #7a7f89;
+    color: #fff;
+    font-weight: normal;
+    padding: 7px 0;
+    width:460px;
+}
+.s-size{
+    background: #7a7f89;
+    color: #fff;
+    font-weight: normal;
+    padding: 7px 0;
+    width:103px;  
+}
+.s-cont{
+    background: #7a7f89;
+    color: #fff;
+    font-weight: normal;
+    padding: 7px 0;
+    width:96px;
+}
+.s-youhui{
+    background: #7a7f89;
+    color: #fff;
+    font-weight: normal;
+    padding: 7px 0;
+    width:137px;
+}
+.s-xiaoji{
+    background: #7a7f89;
+    color: #fff;
+    font-weight: normal;
+    padding: 7px 0;
+    width:125px;
+}
+.should{
+    text-align:right;
+    padding-top:10px;
+    border:1px solid #ccc;
+    border-top:1px solid #333;
+}
+.hh1{
+    text-align:right;
+    color:#a10000;;
+    font-size:18px;
+}
+.hh1 span{
+    font-size:30px;
+    color:#a10000;;
+}
+.tijiao{
+    overflow:hidden;
+}
+.tijiao div{
+    border: 1px solid #EBE5BB;
+    background: #FFFEF5;
+    width: 60%;
+    padding: 15px;
+    margin: 0 10px 0 0;
+    float: right;
+    text-align: center;
+    font-size: 14px;
+}
+.subtijiao{
+    width: 150px;
+    height: 41px;
+    float: right;
+    margin-right: 0;
+    color: #fff;
+    font: normal bold 24px 'Microsoft Yahei','Microsoft JHenghei',SimHei;
+    padding-bottom: 5px;
+    background:#950224;
+    border-radius:5px;
+}
+
+ /*页脚开始*/
+ .footer{
+    margin-top:40px;
+    margin-bottom:20px;
+ }
+
+ .certs a{
+    display:inline-block;
+    margin-right:20px;
+ }
+ .certs{
+    text-align:center;
+    margin-bottom:40px;
+ }
+
+ 

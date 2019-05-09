@@ -1,0 +1,258 @@
+﻿.ui-helper-clearfix:after
+{
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.ui-helper-clearfix
+{
+    display: inline-block;
+}
+/* required comment for clearfix to work in Opera \*/
+* html .ui-helper-clearfix
+{
+    height: 1%; /* fix ie6 height bug */
+    _height: 23px;
+}
+.ui-helper-clearfix
+{
+    display: block;
+}
+
+/* states and images */
+.ui-icon
+{
+    display: block;
+    text-indent: -99999px;
+    overflow: hidden;
+    background-repeat: no-repeat;
+}
+
+/* Misc visuals
+----------------------------------*/
+
+/* Overlays */
+.ui-widget-overlay
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/*
+ * jQuery UI Dialog 1.8.13
+ *
+ * Copyright 2011, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Dialog#theming
+ */
+.ui-dialog
+{
+    position: absolute;
+    background: white;
+    width: 300px;
+    overflow: hidden;
+    border: 1px solid #A10000 /*{borderColorContent}*/;
+    -moz-border-radius: 4px; /* gecko */
+    -webkit-border-radius: 4px; /* webkit */
+    border-radius: 4px; /* w3 */
+    -webkit-box-shadow:2px 2px 10px #292929;
+    -moz-box-shadow:2px 2px 10px #292929;
+    box-shadow:2px 2px 10px #292929;
+}
+.ui-dialog .ui-dialog-titlebar
+{
+    position: relative;
+}
+.ui-dialog .ui-dialog-title
+{
+    float: left;
+    margin: .2em 16px .1em .5em;
+}
+.ui-dialog .ui-dialog-titlebar-close
+{
+    position: absolute;
+    right: .3em;
+    top: 50%;
+    margin: -7px 0 0 0;
+}
+.ui-dialog .ui-dialog-titlebar-close span
+{
+    display: block;
+}
+.ui-dialog .ui-dialog-titlebar-close:hover, .ui-dialog .ui-dialog-titlebar-close:focus
+{
+    padding: 0;
+}
+.ui-dialog .ui-dialog-content
+{
+    position: relative;
+    border: 0;
+    padding: 2em;
+    text-align:center;
+    background: none;
+    overflow: auto;
+    zoom: 1;
+}
+.ui-dialog .ui-dialog-buttonpane
+{
+    text-align:center;
+    border-width: 1px 0 0 0;
+    background-image: none;
+    padding-bottom: 1em;
+}
+.ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset
+{
+    /*float: right;*/
+}
+.ui-dialog .ui-dialog-buttonpane button
+{
+    border: none 0;
+    padding-bottom: 3px;
+    height: 19px;
+    width: 57px;
+    margin-left: .5em;
+    background: #A10000 url(/images/vancl.plugins/red-style.png) no-repeat 0 0;
+    cursor: pointer;
+    color: #fff;
+    outline: none 0;
+}
+.ui-dialog .ui-dialog-buttonpane .close-button{ background-image:none; background-color:#fff; text-decoration:underline; color:#666; }
+.ui-dialog .ui-resizable-se
+{
+    width: 14px;
+    height: 14px;
+    right: 3px;
+    bottom: 3px;
+}
+.ui-draggable .ui-dialog-titlebar
+{
+    cursor: move;
+}
+
+/* Component containers
+----------------------------------*/
+.ui-widget
+{
+    font-family: Verdana,Arial,sans-serif /*{ffDefault}*/; /*font-size: 1.2em {fsDefault};*/
+}
+.ui-widget .ui-widget
+{
+    font-size: 1em;
+}
+.ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button
+{
+    font-family: Verdana,Arial,sans-serif /*{ffDefault}*/;
+    font-size: 1em;
+}
+.ui-widget-content
+{
+    color: #333333 /*{fcContent}*/;
+}
+.ui-widget-content a
+{
+    color: #333333 /*{fcContent}*/;
+}
+.ui-widget-header
+{
+    background: #cccccc url(/images/vancl.plugins/red-style.png) 0 -30px repeat-x;
+    height: 23px;
+    color: #fff /*{fcHeader}*/;
+    font-weight: bold;
+}
+.ui-widget-header a
+{
+    color: #333333 /*{fcHeader}*/;
+}
+
+/* Interaction states
+----------------------------------*/
+
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus
+{
+    background: #dadada /*{bgColorHover}*/ url(/images/vancl.plugins/red-style.png) /*{bgImgUrlHover}*/ 0 /*{bgHoverXPos}*/ -19 /*{bgHoverYPos}*/ no-repeat /*{bgHoverRepeat}*/;
+    font-weight: normal /*{fwDefault}*/;
+    color: #212121 /*{fcHover}*/;
+}
+
+/* states and images */
+.ui-icon
+{
+    width: 11px;
+    height: 11px;
+    background-image: url(/images/vancl.plugins/red-style.png) /*{iconsContent}*/;
+}
+.ui-state-hover .ui-icon, .ui-state-focus .ui-icon
+{
+    background-image: url(/images/vancl.plugins/red-style.png) /*{iconsHover}*/;
+}
+
+.ui-icon-closethick
+{
+    background-position: 0 -19px;
+}
+
+/* Overlays */
+.ui-widget-overlay
+{
+    background: #aaaaaa /*{bgColorOverlay}*/ url(/images/vancl.plugins/ui-bg_flat_0_aaaaaa_40x100.png) /*{bgImgUrlOverlay}*/ 50% /*{bgOverlayXPos}*/ 50% /*{bgOverlayYPos}*/ repeat-x /*{bgOverlayRepeat}*/;
+    opacity: .3;
+    filter: Alpha(Opacity=30) /*{opacityOverlay}*/;
+}
+
+/* simple dialog css */
+.simple-dialog
+{
+    width:152px; position:absolute; left:0; top:28px; border:1px #a10000 solid; display:block; background:#fff; text-align:center;  color:#333;
+    margin-left: -97.5px; /* width*65% */
+    margin-top:-8px;/* arrow height */
+}
+.simple-dialog a
+{
+    cursor: pointer;
+}
+
+.simple-dialog .cancel-icon
+{
+    background-position: 0 -8px;
+    display:none;
+    position: absolute;
+    cursor: pointer;
+    height: 11px; /* cancel-icon image's height */
+    width: 11px; /* cancel-icon image's width */
+    right: 5px;
+    top: 5px;
+    overflow: hidden; /* fix ie6 background show incorrect. */
+}
+.simple-dialog .msg
+{
+    padding: 10px 0 0 15px;    
+}
+.simple-dialog .buttons
+{
+    margin:10px 0;
+    text-align:center;
+}
+.simple-dialog .sure, .simple-dialog .cancel
+{
+    margin-right: 10px;
+}
+.simple-dialog-arrow
+{
+    position: absolute;
+    overflow: hidden; /* fix ie6 background show incorrect. */
+    background-position: 0 0;
+    height: 8px; /* arrow image's height */
+    width: 9px; /* arrow image's width */
+    left: 65%; /* center */
+    bottom: -8px; /* -arrow image's height */
+    background-image: url(/images/vancl.plugins/icon-shopping.gif);
+    background-repeat: no-repeat;
+}
+/* end simple dialog css */

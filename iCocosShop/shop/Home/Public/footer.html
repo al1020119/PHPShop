@@ -1,0 +1,61 @@
+ <div class="footer">
+                <div class="foot-top">
+                    <div class="custmer">
+                        <ul>
+                            <li class="custmer-list">
+                                <a href="">
+                                    <p class="online"><img  src="./Public/image/online.png"></p>
+                                    <p class="time"> 7X9小时在线客服</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <p class="seven-img"><img  src="./Public/image/seven.png"></p>
+                                    <p class="seven">7天退换货</p>
+                                    <p class="seven"> 购物满199元免运费</p>
+                                </a>
+                            </li>
+                            <li>
+                                <p class="ewm">
+                                    <img src="./Public/image/ewm.jpg" width="104" height="104">
+                                </p>
+                                <p class="seven">扫面下载<font color="#a10000">凡客</font>客户端</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="public">
+                        <ul>
+                            <li>关于凡客</li>
+                            <li>新手指南</li>
+                            <li>配送范围及时间</li>
+                            <li>支付方式</li>
+                            <li>售后服务</li>
+                            <li>帮助中心</li>
+                        </ul>
+                    </div>
+                </div>  
+                <div class="foot-bottom">
+                    <div class="supfoot">
+                        <p> Copyright 2007 - 2016 vancl.com All Rights Reserved 京ICP证100557号 京公网安备11011502002400号 出版物经营许可证新出发京批字第直110138号</p>
+                        <p> 凡客诚品（北京）科技有限公司</p>
+                    </div>
+                    <?php
+                    $friend = new Model('friend');
+                    $f = $friend->where('status=1')->order('orders')->select();
+                    //var_dump($f);
+
+
+                    ?>
+                    <div class="subfoot">
+                        <?php if(!empty($f)){
+                                foreach($f as $v):
+                        ?>
+                        <a href=""><img src="../Upload/<?=$v['pic']?>" width="120" height="49"></a>
+                    <?php endforeach;
+                            }
+                    ?>
+                    </div>
+                </div>
+            </div>
+
+ 

@@ -1,0 +1,231 @@
+﻿$("UserMap").html("编辑个人档案");
+function selecteOption(select, val) {
+    try {
+        select.val(val);
+    }
+    catch (ex) { // fixed ie6 can not set the selected attribute
+        setTimeout(function () {
+            select.val(val);
+        }, 1);
+    }
+}
+function InitValue() {
+    //    var bYear = $("#bYear").attr("data-year");
+    //    var Sex = $("#txtSex").val();
+
+    //    if (Sex == 1) {
+    //        $("#female").attr("checked", "checked");
+    //    }
+    //    else if (Sex == 2) {
+    //        $("#male").attr("checked", "checked");
+    //    }
+    //    if (bYear != "") {
+    //        //$("#bYear").val(bYear);
+    //        selecteOption($("#bYear"), bYear);
+    //        $("#bYear").attr("disabled", "disabled");
+    //    }
+
+    //    var bMonth = $("#bMonth").attr("data-month");
+    //    if (bMonth != "") {
+    //        //$("#bMonth").val(bMonth);
+    //        selecteOption($("#bMonth"), bMonth);
+    //        $("#bMonth").attr("disabled", "disabled");
+    //    }
+
+    //    var bDay = $("#bDay").attr("data-day");
+    //    if (bDay != "") {
+    //        //$("#bDay").val(bDay);
+    //        selecteOption($("#bDay"), bDay);
+    //        $("#bDay").attr("disabled", "disabled");
+    //    }    
+
+    var MarriageStatus = $("#MarriageStatus").attr("data-marriagestatus");
+    if (MarriageStatus != "") {
+        //$("#MarriageStatus").val(MarriageStatus);
+        selecteOption($("#MarriageStatus"), MarriageStatus);
+    }
+
+    var EducationLevel = $("#EducationLevel").attr("data-educationlevel");
+    if (EducationLevel != "") {
+        //$("#EducationLevel").val(EducationLevel);
+        selecteOption($("#EducationLevel"), EducationLevel);
+    }
+
+    var Vocation = $("#Vocation").attr("data-vocation");
+    if (Vocation != "") {
+        //$("#Vocation").val(Vocation);
+        selecteOption($("#Vocation"), Vocation);
+    }
+
+    var Industry = $("#Industry").attr("data-industry");
+    if (Industry != "") {
+        //$("#Industry").val(Industry);
+        selecteOption($("#Industry"), Industry);
+    }
+
+    var MonthEarning = $("#MonthEarning").attr("data-monthearning");
+    if (MonthEarning != "") {
+        //$("#MonthEarning").val(MonthEarning);
+        selecteOption($("#MonthEarning"), MonthEarning);
+    }
+
+}
+function InitTime(selectObj) {
+    createSelect("bYear", "bMonth", "bDay", 1, 1940)
+}
+
+function CheckForm() {
+
+    SumbmitUserDetail();
+}
+
+function CheckOnBlur(f_v) {
+    var val = $("#" + f_v).val();
+    if (f_v == "Interest") {
+        if (val.length > 200) {
+            $("#WrongInterest").show();
+        } else {
+            $("#WrongInterest").hide();
+        }
+    }
+    else if (f_v == "SelfIntro") {
+        if (val.length > 500) {
+            $("#WrongSelfIntro").show();
+        } else {
+            $("#WrongSelfIntro").hide();
+        }
+    }
+    else if (f_v == "SelfIntro") {
+        if (val.length > 500) {
+            $("#WrongSelfIntro").show();
+        } else {
+            $("#WrongSelfIntro").hide();
+        }
+    }
+    //    else if (f_v == "bDay") {
+    //        var _bYear = $("#bYear").val();
+    //        var _bMonth = $("#bMonth").val();
+    //        var _bDay = $("#bDay").val();
+
+    //        if (_bYear != "") {
+    //            if (_bMonth == "" || _bDay == "") {
+    //                $("#WrongBirthDay").show();
+    //            }
+    //            else {
+    //                $("#WrongBirthDay").hide();
+    //            }
+    //        }
+    //        else {
+    //            if (_bMonth != "" || _bDay != "") {
+    //                $("#WrongBirthDay").show();
+    //            }
+    //            else {
+    //                $("#WrongBirthDay").hide();
+    //            }
+    //        }
+    //    }
+}
+function SumbmitUserDetail() {
+    // debugger;
+    var _Sex = $("input[name='Sex']:checked").val(); //$("#Sex").val();
+    var _bYear = $("#bYear").val();
+    var _bMonth = $("#bMonth").val();
+    var _bDay = $("#bDay").val();
+    var _MarriageStatus = $("#MarriageStatus").val();
+    var _EducationLevel = $("#EducationLevel").val();
+    var _Vocation = $("#Vocation").val();
+    var _Industry = $("#Industry").val();
+    var _MonthEarning = $("#MonthEarning").val();
+    var _Interest = $("#Interest").val();
+    var _SelfIntro = $("#SelfIntro").val();
+    if (_Interest.length > 200) {
+        $("#WrongInterest").show();
+        return false;
+    }
+    else {
+        $("#WrongInterest").hide();
+    }
+
+    if (_SelfIntro.length > 500) {
+        $("#WrongSelfIntro").show();
+        return false;
+    }
+    else {
+        $("#WrongSelfIntro").hide();
+    }
+
+    //    if (_bYear != "") {
+    //        if (_bMonth == "" || _bDay == "") {
+    //            $("#WrongBirthDay").show();
+    //            return false;
+    //        }
+    //        else {
+    //            $("#WrongBirthDay").hide();
+    //        }
+    //    }
+    //    else {
+    //        if (_bMonth != "" || _bDay != "") {
+    //            $("#WrongBirthDay").show();
+    //            return false;
+    //        }
+    //        else {
+    //            $("#WrongBirthDay").hide();
+    //        }
+    //    }
+
+    var _params = "&Sex=" + _Sex + "&bYear=" + _bYear + "&bMonth=" + _bMonth + "&bDay=" + _bDay
+                    + "&MarriageStatus=" + _MarriageStatus + "&EducationLevel=" + _EducationLevel
+                    + "&Vocation=" + _Vocation + "&Industry=" + _Industry + "&MonthEarning=" + _MonthEarning
+                    + "&Interest=" + _Interest + "&SelfIntro=" + _SelfIntro;
+    var _url = "/User/EditUserDetail";
+    $.ajax({
+        type: "POST",
+        cache: false,
+        dataType: "text",
+        jsonp: "callback",
+        url: _url,
+        data: _params,
+        beforeSend: function () { },
+        success: function (data) {
+            if (data != "") {
+                if (data == "1") {
+                    b = setInterval("CallBack()", 5000);
+//                    var options = { msg: "更新成功!", modal: true,
+//                        fn: function () { CallBack(); },
+//                        close: function () { CallBack(); }
+//                    };
+//                    v.dialog.alert(options);
+                    $.fn.alert('更新成功', function () {
+                        CallBack();
+                    });
+                }
+                else {
+//                    var options = { msg: "更新失败！", modal: true };
+//                    v.dialog.alert(options);
+
+                    $.fn.alert('更新失败');
+                }
+            }
+            else {
+//                var options = { msg: "网络有误,请稍后再试！", modal: true };
+//                v.dialog.alert(options);
+
+                $.fn.alert('网络有误,请稍后再试！');
+            }
+        },
+        error: function () {
+            var options = { msg: "保存失败，请稍后再试！", modal: true };
+            v.dialog.alert(options);
+
+            $.fn.alert('保存失败，请稍后再试！');
+        }
+    });
+}
+
+function CallBack() {
+    clearInterval(b);
+    window.location.href = "http://my.vancl.com/";
+}
+
+//InitTime();
+InitValue();

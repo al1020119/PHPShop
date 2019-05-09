@@ -1,0 +1,239 @@
+<!doctype html>
+<html>
+    <head>
+        <title>男装 > 衬衫 - 商务 - VANCL 凡客诚品</title>
+            <meta charset="utf-8">
+            <link rel="stylesheet" href="./Public/css/list.css">
+            <link rel="icon" href="./Public/image/favicon.ico"> 
+            <meta name="keywords" content="男装，衬衫，商务 - VANCL 凡客诚品">
+            <meta name="descripiton" content="VANCL品牌系列产品之一，包括：男装，衬衫，商务">
+    </head>
+    <body>
+        <div class="container">
+            <!-- 头部开始 -->
+<?php
+include './Public/header.html';
+include './Public/nav.html';
+?>
+                
+                
+                <!-- nav结束 -->
+
+            </div>
+               <!-- 头部结束 -->
+                <!-- 主体开始 -->
+            <div class="main">
+                <div class="topnav">
+                    <!-- <div class="place">
+                        <span>当前位置:</span>
+                        <a href="">所有分类</a>&gt;
+                        <a href="">男装</a>&gt;
+                        <span>衬衫</span>
+                    </div> -->
+                    <div class="count">
+                        <span>找到相关商品<font color="#a00000"><?=$page->total;?></font>款</span>
+                    </div>
+                </div>
+                <div class="nav">
+                    <ul class="nav-ul">
+                        <li class="nav1st">
+                            <span>衬衫</span>
+                            <a href="">
+                                长袖衬衫<font>(66)</font>
+                            </a>
+
+                        </li>
+                        <li class="nav-li nav-li1" style="border-bottom:1px dashed #ccc">
+                            <span class="bg-color1">版型</span>
+                            <div>
+                                <a href="">标准<font>(17)</font></a>
+                                <a href="">宽松<font>(7)</font></a>
+                                <a href="">修松<font>(2)</font></a>
+                            </div>
+                            <em id='em'></em>
+                        </li>
+                        
+                        <li class="nav-li" style="border-bottom:1px dashed #ccc">
+                            <span class="bg-color1">领型</span>
+                            <div>
+                                <a href="">温莎领<font>(18)</font></a>
+                                <a href="">领间扣<font>(4)</font></a>
+                                <a href="">小方领<font>(2)</font></a>
+                                <a href="">钉扣领<font>(2)</font></a>
+                            </div>
+                        </li>
+                        <li class="nav-li">
+                            <span class="bg-color1">花色</span>
+                            <div>
+                                <a href="">格纹<font>(16)</font></a>
+                                <a href="">条纹<font>(14)</font></a>
+                                <a href="">纯色<font>(6)</font></a>
+                                <a href="">素色<font>(6)</font></a>
+                            </div>
+                        </li>
+                        
+                    </ul>
+                    <div class="filterbar">
+                        <div class="left_filter left">
+                            <a href="">全部商品</a>
+                        </div>
+
+                        <?php  
+                        if($_GET['a'] !=="HOT"):?>
+
+                        <div>
+                             
+                        <?=$page->show();?>
+                    
+                        </div>
+                    <?php endif;?>
+                    </div>
+                </div>
+                <?php  
+                if($_GET['a'] !=="HOT"):?>
+                <div class="filterform">
+                    <div class="filter-order left">
+                        <ul>
+                            <li>
+                                <a title="按推荐由高到低" href="index.php?c=Goods&a=index&<?=$now?>&sortTime=addtime desc&p=<?=$page->current?>" >
+                                    <span>默认(最新)</span>
+                                    <em class="jt1"></em>
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a title="按销量由低到高" href="index.php?c=Goods&a=index&<?=$now?>&sortBuy=buynum desc&p=<?=$page->current?>" >
+                                    <span>销量</span>
+                                    <em class="jt2"></em>
+                                </a>
+                            </li>
+                            <li>
+                                <a title="按好评由高到低" href="index.php?c=Goods&a=index&<?=$now?>&sortClick=clicknum desc&p=<?=$page->current?>" >
+                                    <span>点击量</span>
+                                    <em class="jt3"></em>
+                                </a>
+                            </li>
+                            
+                            <li class="filterbg">
+                                <a title="按价格从低到高" href="index.php?c=Goods&a=index&<?=$now?>&sortPrice=price&p=<?=$page->current?>" >
+                                    <span>价格</span>
+                                    <em class="jt5"></em>
+                                </a>
+                                <em class="botton"></em>
+                                <a title="按价格从高到低" href="index.php?c=Goods&a=index&<?=$now?>&sortPrice=price desc&p=<?=$page->current?>" >
+                                    <span>价格</span>
+                                    <em class="jt1"></em>
+                                </a>
+                                <em class="botton"></em>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="filterinput left" >
+                    <form action="index.php" method="get">
+                    <input type="hidden" name="c" value="Goods">
+                    <input type="hidden" name="a" value="index">
+                    <input type="hidden" name="tid" value="<?=isset($_GET['tid'])?$_GET['tid']:'';?>">
+                    <input type="hidden" name="name" value="<?isset($_GET['name'])?$_GET['name']:'';?>">
+
+                        <input type="number" name="p1" value="<?php echo isset($_GET['p1'])?$_GET['p1']:''?>"  placeholder="最小价格" min='0' style="width:70px;height:26px;position:relative;top:-7px"/>
+                        <span>-</span>
+                        <input type="number" name="p2" value="<?php echo isset($_GET['p2'])?$_GET['p2']:''?>"  placeholder="最大价格" style="width:70px;height:26px;position:relative;top:-7px"/>
+                        
+                    <input type="hidden"  name='name' value="<?=isset($_GET['name'])?$_GET['name']:''?>">
+                                    <button  class="r-button" style="position:relative;top:2.7px"></button>
+                    
+                    </form>
+                    </div>
+                    <div class="hetong right">
+                        <a href="">合同并款</a>
+                    </div>
+                </div>
+                <?php endif;?>
+                <!-- 导航栏结束 -->
+                
+                <!--商品区-->
+                <div class="goods-list">
+                    <?php foreach($arr as $k=>$v):?>
+                    <ul style="float:left">
+                        <li >
+                            <a href="<?=$v['id']?>.html"><img src="../Upload/<?=$v['pic']?>" ></a>
+                            <p>
+                                <a href=""><?=$v['name']?></a>
+                            </p>
+                            <div>
+                                <span>售价￥<?=$v['price']?></span>
+                            </div>
+                            <div>
+                                <span>购买量:<?=$v['buynum']?></span><br>
+                                <span>点击量:<?=$v['clicknum']?></span>
+                            </div>
+                        </li>    
+                        
+                    </ul>
+                <?php endforeach;?>
+                </div>
+                <!-- 商品区结束 -->
+                <?php  
+                if($_GET['a'] !=="HOT"):?>
+                <div class="pages">
+                    <ul>
+                        <?=$page->show();?>
+                    </ul>
+                </div>
+            <?php endif;?>
+            </div>
+                <!-- 主体结束 -->
+                <!-- 页脚开始 -->
+          <?php
+          include'./Public/footer.html';
+          ?>
+            <!-- 页脚结束 -->
+        </div>
+        <?php //var_dump($_SESSION['see']);?>
+            <!-- 浏览历史 -->
+        <!--浏览历史-->
+        <div   style="position:fixed;left:0px;top:218px;border:1px solid lightgray;width:110px;height:500px;overflow:auto;background:white">
+    <center><font color="#b81c22">最近还看了</font><a href="index.php?c=Goods&a=delSee"><button style="background: #A10000 url(overlay.png) repeat-x;
+    display: inline-block;
+    padding: 5px 10px 6px;
+    color: #fff;
+    text-decoration: none;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.6);
+    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.6);
+    text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
+    border-bottom: 1px solid rgba(0,0,0,0.25);
+    position: relative;
+    cursor: pointer">清空浏览</button></a></center>
+    <hr>
+    <center>
+    <ul >
+    <?php   
+            $goods = new Model('goods');
+            $list = $goods->order('id desc')->select();
+            $see = array_reverse($_SESSION['see']);
+    foreach($see as $v):
+    foreach($list as $val):
+        if($val['id'] ==$v):
+    ?>
+        <li><hr><a href="<?=$val['id']?>.html" ><img src="../Upload/<?=$val['pic']?>" width="80" height="80"></a><br><a href="index.php?c=Goods&a=detail&id=<?=$val['id']?>"><font size="2">名称:<?=$val['name']?></font></a>
+                            
+                            <div>
+                                <span><font size="2">售价￥<?=number_format($val['price'],2)?></font></span>
+                            </div>
+                            
+        </li>
+        <?php   endif;
+                endforeach;
+                endforeach;
+
+
+        ?>
+    </ul>
+    </center><?php if(@$_SESSION['see']!=[]):?>
+    
+        <?php endif;?>
+    </div>
+    </body>
+</html>

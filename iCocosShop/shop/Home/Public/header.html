@@ -1,0 +1,215 @@
+<!doctype html>
+<html>
+<?php
+if(!isset($_SESSION['see'])){
+            $_SESSION['see']=[];
+        }
+?>
+    <head>
+        <title>凡客VANCL-互联网快时尚品牌,服装,鞋,配饰,网上购物货到付款网站,7天无条件退货</title>
+        <meta charset="utf-8">
+        <meta name="keywords" content="VANCL,凡客,凡客诚品,货到付款,快时尚,时尚,品牌服装,男装,女装,童装,鞋,家居,配饰,衬衫,牛津纺,青年布,法兰绒,牛津纺衬衫,法兰绒衬衫,衬衣,长袖衬衫,短袖衬衫,全棉,纯棉,全棉衬衫,纯棉衬衫,全棉衬衣,纯棉衬衣,免烫,免熨,免烫衬衫,免熨衬衫,免烫衬衣,免熨衬衣,牛津纺衬衣,领尖扣,直领,小方领,POLO,短袖POLO,长袖POLO,条纹POLO,素色POLO,T恤,圆领T恤,VT,圆领T,印花T,文化衫,卫衣,打底衫,高领衫,低领,鞋,皮鞋,板鞋,商务皮鞋,正装皮鞋,滑板鞋,潮鞋,休闲皮鞋,帆布鞋,运动鞋,运动休闲鞋,家居鞋,雪地靴,靴子,平底鞋,圆头,尖头,女鞋,休闲鞋,男鞋,丝袜,长筒袜,连裤袜,网袜,天鹅绒,瘦腿袜,中筒袜,筒袜,棉袜,靴袜,打底裤,羽绒服,围巾,棉线衫,开衫,针织衫,外套,西服,休闲西服,夹克,大衣,毛衣,背心,毛背心,裤子,长裤,休闲裤,牛仔裤,牛仔,卡其裤,直筒休闲裤,直筒卡其裤,免烫休闲裤,免烫卡其裤,斜纹休闲裤,斜纹卡其裤,短裤,沙滩裤,内衣,内裤,秋衣,秋裤,三角裤,平角裤,袜子,家居,户外,床品,拖鞋,盖毯,断码,打折,特惠,直降">
+        <meta name="desciption" content="凡客VANCL 官方网站,互联网快时尚品牌,网上购物首选品牌,提供男装、女装,鞋,家居等多种商品网购,支持货到付款的购物网站,特价商品,优惠券,快速配送,货到付款,买衣服网站首选。">
+        <link rel="icon" href="./Public/image/favicon.ico">
+        <link rel="stylesheet" href="./Public/css/index.css">
+        <style>
+            #banner{
+                width:1200px;
+                margin:0 auto;
+                text-align:center;
+                height:535px;
+                position:relative;
+            }
+            #banner ul{
+                width:100%;
+                position:absolute;
+                left:0px;
+            }
+          
+            #icon{
+                width:1200px;
+                height:20px;
+                position:absolute;
+                bottom:10px;
+                left:0px;
+                z-index:1;
+                text-align:center;
+            }
+            #icon a{
+                display:inline-block;
+                height:20px;
+                width:20px;
+                background:#dddddd;
+                border-radius:100%;
+                background:orange;
+                font-weight:800;
+                font-size:12;
+                color:#fff;
+                text-decoration:none;
+            }
+            .jt{
+                display:block;
+                width:28px;
+                height:60px;
+                position:absolute;
+            }
+            #prev{
+                background:url('./Public/image/111.png') no-repeat 0px 0px;
+                left:55px;
+                z-index:2;
+                top:50%;
+            }
+
+            #next{
+                background:url('./Public/image/111.png') no-repeat -52px 0px;
+                right:30px;
+                z-index:2;
+                top:50%;
+            }
+            #prev:hover{
+                background:url('./Public/image/111.png') no-repeat 0px -61px;
+            }
+             #next:hover{
+                background:url('./Public/image/111.png') no-repeat -52px -61px;
+            }
+            #one li{
+                width:1200px;
+                height:535px;
+                display:none;
+            }
+            .shopcar td{
+                text-align:center;
+            }
+        </style>
+    </head>
+    <body>
+    <?php
+        $top = new Model('tops');
+        $info1 =$top->select();
+        
+        $info1 =$info1[0];
+        //var_dump($info1);
+        if($info1['status']==1){
+    ?>
+    <div style="width:100%;height:70px;">
+    <img src="../Upload/<?=$info1['pic']?>" width="100%" height="100%"/>
+
+    </div>
+    <?php }?>
+        <div class="container">
+                <!-- 头部开始 -->
+            <div class="header">
+                <!-- 顶部通知栏开始 -->
+                <div class="header-area">
+                    <div class="header-top center">
+                        <div class="top-right right">
+                            <div class="active left">
+                                <a href="" class="laba">网站公告</a>
+                            </div>
+                            <div class="gf right">
+                                <a href="" class="weixin bg-image"></a>
+                                <img class="ewm1" src="./Public/image/ewm1.png">
+                                <a href="" class="weibo bg-image"></a>
+                            </div>
+                        </div>
+                        <?php if(!empty($_SESSION['username'])):?>
+                        <div class="order right">
+                        <a href="index.php?c=Orders&a=detail">我的订单</a>
+                        </div><div class="order right">
+                        <a href="index.php?c=User&a=person">个人主页</a>
+                        </div>
+                        <?php endif;?>
+        
+
+                        <div class="login right">   
+                            <span><?php if(!isset($_SESSION['username'])){?>
+                            <span><a href="index.php?c=Login&a=index">&nbsp;登录&nbsp;</a>|<a href="index.php?c=User&a=add">&nbsp;注册</a>
+                            </span>
+                        <?php }?>
+                        <?php if($_SESSION['username']){
+                                ?><font color="red">
+                                <?=$_SESSION['username']['username']?></font>，“欢迎光临凡客商城！”
+                                &nbsp;
+                            <a href="index.php?c=Login&a=logout">&nbsp;退出</a></span>
+                            <?php }?>
+
+                        </div>　　
+                        <div class="order right"><span>　　<a href="index.php?c=Home&a=index">首页</a></span></div>
+                    </div>
+                </div>
+                <!-- 顶部通知栏结束 -->
+                <!-- 搜索开始 -->
+                <div class="header-middle">
+                    <div class="reach-area right">
+                            <div class="left">
+                                  <form action="index.php" method="get">
+                                  <input type="hidden" name="c" value="Goods"/>
+                                  <input type="hidden" name="a" value="index"/>
+                                  <input type="text" placeholder="请输入商品名或者类名进行搜索" class="sousuo" name='name' required>
+                                    <button  class="r-button"></button>
+                                    </form>       
+                            </div>
+
+                            <!-- <div class="buycar fr active" id="shoppingCarNone"><p><a id="shoppingcar_link" rel="nofollow" href="http://shopping.vancl.com/mycart" name="hp-hp-head-cart-v:n:t" class="shopborder track cartab">购物车(<span car_product_total="shoppingCar_product_totalcount">0</span>)</a><s></s></p><div class="bottomlines"></div><div class="BuycarTab shopDropList"></div></div> -->
+                            <div class="gouwuche">
+                                <a href="index.php?c=Goods&a=shopcar" class="shopping right">
+<?php
+//统计商品数量
+$total = 0;
+if(isset($_SESSION['shopcar'])){
+foreach ($_SESSION['shopcar'] as $v) {
+    $total += $v['num'];
+    }
+}   
+
+?>      
+                                    <div class="shop-count" style="position:fixed;top:151px;right:111px;overflow:auto;width:600px;">
+                                    <?php 
+                                    if(!empty($_SESSION['shopcar'])){
+                                        echo "<table class='shopcar' >
+                                    <tr>    
+                                        <td width='150'>商品</td>
+                                        <td width='80'>单价</td>
+                                        <td width='120'>数量</td>
+                                        <td width='80'>总价</td>
+                                        <td>操作</td>
+                                    </tr>";
+
+                                    foreach($_SESSION['shopcar'] as $v):
+                                    ?>
+                                    <tr>
+       
+        <td ><a href="<?=$v['id']?>.html"><img src="../Upload/<?=$v['pic']?>" width="100"></a><br><a href="<?=$v['id']?>.html"><?=$v['name']?></a></td>
+        
+        <td ><span class="price"><?=number_format($v['price'],2)?></span></td><td ><a href="index.php?c=Goods&a=changeNum&id=<?=$v['id']?>&fu=jian" style="display:inline-block;padding:3px 7px;border:1px solid #a10000">-</a>
+            <input type="text" size="2" value="<?=$v['num']?>">
+            <a href="index.php?c=Goods&a=changeNum&id=<?=$v['id']?>&fu=jia" style="display:inline-block;padding:3px 5px;border:1px solid #a10000">+</a></td>    
+
+        <td ><?=number_format($v['num']*$v['price'],2)?>元</td>
+        <td><a class="then" href="index.php?c=Goods&a=delShopcar&id=<?=$v['id']?>" onClick="return confirm('确定删除?');"><p class="time">删除</p></a></td>
+
+        </tr>
+
+                                    <?php endforeach;}else{?>
+                                    <center>购物车空空如也~<br>
+                                    请去逛逛，添加商品！
+                                    </center>
+                                    <?php }?>
+                                    
+                                    </table>
+                                    </div>
+                                    <span class="shop-text">购物车(<?="{$total}"?>)</span>
+                                </a>
+                            </div>
+                        <div class="hotword clear">
+                            <p><a href="index.php?c=Goods&a=HOT">热门商品</a>
+                                <a href="index.php?c=Goods&a=index&tid=18">热卖跑车</a>
+                                <a href="index.php?c=Goods&a=index&tid=21">休闲跑鞋</a>
+                                <a href="index.php?c=Goods&a=index&tid=12">冰冻食物</a>
+                                <a href="index.php?c=Goods&a=index&tid=16">热食</a>
+                                <a href="index.php?c=Goods&a=index&tid=22">休闲衣服</a>
+                                <a href="index.php?c=Goods&a=index&tid=23">休闲肩包</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>

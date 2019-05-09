@@ -1,0 +1,26 @@
+.w{ width:980px; margin:0 auto; }
+.fr{ float:right;}
+body{ background:url(../img/body-bg.jpg) repeat; }
+#header{ background:url(../img/header-bg.jpg) repeat-x; }
+#header  h1{ color:#fff; font-family:'Architects Daughter','Helvetica Neue',Helvetica,Arial,serif; padding:40px 20px 0 0px; } 
+#header .lead{ color:#fff; padding:20px 20px 62px 0px; } 
+
+#main{ padding-top:30px; }
+#main h3{ background:url(../img/h3-bg.jpg) no-repeat left center; padding-left:30px; }
+
+
+#login{ padding-top:30px; padding-bottom:70px; }
+#login h3{ background:url(../img/h3-bg.jpg) no-repeat left center; padding-left:30px; }
+
+
+#footer{ background:#F5F5F5; margin-top:30px; border-top:1px solid #E5E5E5; color:#999999; text-align:center;  }
+#footer p{ padding:30px 20px;}
+
+#nav{ margin-top:40px; }
+
+
+
+
+
+
+

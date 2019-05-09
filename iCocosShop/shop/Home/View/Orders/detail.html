@@ -1,0 +1,489 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0061)http://my.vancl.com/Order/#ref=my-left-left-Order|head-denglu -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head id="Head1"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>我的订单</title>
+    <script src="./Public/detail/push.js.下载"></script><script type="text/javascript" src="./Public/detail/js.ashx"></script>
+    <link href="./Public/detail/css.ashx" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" href="http://i.vanclimg.com/common/favicon/favicon.ico" type="image/x-icon">
+    
+    
+
+    <link type="text/css" rel="stylesheet" href="./Public/detail/css(1).ashx">
+
+    <script type="text/javascript" src="./Public/detail/js(1).ashx"></script>
+
+
+    <script type="text/javascript" language="javascript">
+        var COOKIE_NAME_WEIXIN = "COOKIE_NAME_WEIXIN";
+        $(function () {
+            //'标记已看到菜单移位通知'的cookie名
+//            var COOKIE_NAME_NEWPLACENOTICE1 = "COOKIE_NAME_NEWPLACENOTICE1";
+//            var npn1 = getCookie(COOKIE_NAME_NEWPLACENOTICE1) != "viewed";
+
+//            $.each($("#side-nav").find("ul").children(), function () {
+//                if ($(this).find("a").text().indexOf("账户安全") > -1) {
+//                    $(this).css("position", "relative").prepend($("<p style='position:absolute; top:0; left:88px; width:30px; height:20px; background:url(//i.vanclimg.com/header/20120309/spritesbg.png) no-repeat -190px -137px;'></p>"));
+//                }
+//                if (npn1) {
+//                    if ($(this).find("a").text().indexOf("退换货") > -1) {
+//                        $(this).css("position", "relative").prepend($("<p id='newplacenotice1' style='cursor: pointer;position:absolute; top:1px; left:103px; width:82px; height:20px; background:url(//i.vanclimg.com/my/2012/boot/pjiabg.png) no-repeat -645px 0;  '></p>"));
+//                    }
+//                }
+//            });
+
+//            if (npn1) {
+//                $("#newplacenotice1").bind("click", function () {
+//                    setCookie(COOKIE_NAME_NEWPLACENOTICE1, "viewed", 365 * 100);
+//                    $(this).remove();
+//                });
+//            }
+
+            if (!getCookie(COOKIE_NAME_WEIXIN)) {
+                $("#WeixinBox").show();
+            }
+            $("img[original]").lazyload();
+        });
+        function closeWeixin() {
+            $("#WeixinBox").hide();
+            setCookie(COOKIE_NAME_WEIXIN, "closed");
+        }
+    </script>
+    <style type="text/css">
+        body
+        {
+            font-size: 12px !important;
+        }
+        .newitenforsafecenteonly
+        {
+            background: url("http://i.vanclimg.com/header/20120309/spritesbg.png") no-repeat scroll 0 0 transparent;
+            background-position: -190px -132px;
+            width: 100px;
+        }
+        #Head a:hover
+        {
+            text-decoration: none;
+        }
+    </style>
+    
+</head>
+<body id="body" class="cols_manage">
+    <?php 
+    include './Public/header.html';
+    ?>
+    <div class="wrapper">
+        <div style="height: 15px; clear: both; overflow: hidden">
+        </div>
+        <dl id="position">
+            <dt> 您当前的位置：<a href="index.php?c=Home&a=index">凡客首页</a></dt>
+			<dd> &gt; <a href="index.php?c=User&a=person"> 我的凡客 </a></dd>
+			<dd>&gt; <a href="index.php?c=Orders&a=Detail">我的订单</a></dd>
+		</dl>
+		<div id="welcome"> 
+		</div>
+
+<div id="side-nav">
+<div class="my_vancl">
+    <h2>
+        <a href="index.php?c=Home&a=index" class="track" name="my-left-left-commorder">我的凡客</a></h2>
+</div>
+    <ul class="">
+        <li>
+            <h3>
+                订单中心</h3>
+        </li>
+                            <li class=""><a href="index.php?c=Orders&a=detail" class="track selected" name="my-left-left-Order" itemurl="http://my.vancl.com/Order/" url="http://my.vancl.com/Order/">
+                ·我的订单</a></li>
+                        
+    </ul>
+
+    <ul class="service-rate">
+        <li>
+            <h3>
+                账户管理</h3>
+        </li>
+                        
+                        <li class=""><a href="index.php?c=User&a=person" class="track" name="my-left-left-personinfo" itemurl="http://my.vancl.com/User/UserInfo" url="http://my.vancl.com/Order/">
+                ·我的资料</a></li>
+                        <li class=""><a href="index.php?c=User&a=address&id=<?=$_SESSION['username']['id']?>" class="track" name="my-left-left-modifyDeliveryInfo" itemurl="http://my.vancl.com/DeliveryAddress/Index" url="http://my.vancl.com/Order/">
+                ·收货地址</a></li>
+                        <li class=""><a href="index.php?c=User&a=safe&id=<?=$_SESSION['username']['id']?>" class="track" name="my-left-left-modifypassword" itemurl="http://my.vancl.com/SafeCenter" url="http://my.vancl.com/Order/">
+                ·账户安全</a></li>
+                        
+    </ul>
+    
+    
+</div>
+
+        
+ 
+<link type="text/css" rel="stylesheet" href="./Public/detail/css(2).ashx">
+
+<div class="ordercontainer">
+    <h3>
+    <span>我的订单</span>
+         <a href="http://catalog.vancl.com/zhuanti/tg_20100510.html" style="color: #a10000;
+            float: right; border: none; font-size: 12px; font-weight: normal; background: url(http://i4.vanclimg.com/cms/20151231/pic_my.jpg) no-repeat left center;
+            text-indent: 20px; margin: 0 5px 0 0;" target="_blank">谨防诈骗公告</a>
+    </h3>
+    <div>
+<div class="blank10"></div>    </div>
+    
+<div class="AsecurityBox01">
+    <div class="asProgress">
+        <em>账户安全：</em>
+        <div class="asProgSpeed">
+            <span class="asProgNow">弱</span><span class="">中</span><span class="">强</span>
+        </div>
+    </div>
+    <ul class="asProgUl" style="_margin-right:-12px;">
+        <li class="asProgPhone01"><a href="http://my.vancl.com/SafeCenter" title="手机未验证" class="track" name="my-order-safe-phone"><em></em>手机未验证</a></li>
+        <li class="asProgEmail01"><a href="http://my.vancl.com/SafeCenter" title="邮箱未验证" class="track" name="my-order-safe-email"><em></em>邮箱未验证</a></li>
+        <li class="asProgPassword01" style="display:none;"><a href="http://my.vancl.com/SafeCenter" title="未设置支付密码" class="track" name="my-order-safe-pay"><em></em>未设置支付密码</a></li>
+    </ul>
+    <div class="asProgAtarts" style="display:none;">为保障账户及资金安全,建议您开启全部<a href="http://my.vancl.com/SafeCenter" class="track" name="my-order-safecenter">安全设置</a></div>
+    <div class="blank0"></div>
+</div>
+
+    <!--<div class="blank10">
+    </div>
+    <div style="width: 778px; height: 56px; line-height: 28px; border: 1px #cc9998 solid;
+        float: left; background: #fff6f7;">
+        <span style="width: 28px; height: 18px; display: block; float: left; background: url(http://i1.vanclimg.com/returns/returns/sprite_bg.png) no-repeat 8px -49px;
+            margin-top: 5px;"></span>
+        <div style="width: 750px; float: left;">尊敬的客户，您在购买第三方品牌的商品后需要换货时，如发现此商品处于售罄状态，请先办理退货，然后用您的账号登陆<a href="http://www.vjia.com" target="_blank">www.vjia.com</a>，搜索到此商品后根据库存状况重新下单。</div>
+    </div>
+	-->
+    <div class="blank10">
+    </div>
+    <div class="wtitle">
+        <div id="cover">
+        </div>
+        <input type="hidden" value="all" id="dingzhiType" name="dingzhiType">
+            <div id="myTab" class="wtitle_l">
+                <input type="hidden" id="Cance" name="Cance" value="true">
+                <input type="hidden" id="TxtOid" name="TxtOid" value="0">
+                <input id="hidHavePaid" name="hidHavePaid" type="hidden" value="0">
+                <input id="hidDingzhi" name="hidDingzhi" type="hidden" value="normal">
+                <input id="cancelordernum" name="cancelordernum" type="hidden" value="0">
+                <input id="QueryStatus" name="QueryStatus" type="hidden" value="全部订单">
+                <a href="javascript:void(0)" class="track wtitle_lNa" name="my_Index_id_allOrder">全部订单<span>(<?=$a?>)</span></a>
+                <a href="javascript:void(0)" class="track" name="my_Index_id_workingOrder">
+                    进行中<span></span></a> <a href="javascript:void(0)" class="track" name="my_Index_id_finishOrder">
+                        已完成<span>(0)</span></a> <a href="javascript:void(0)" class="track" name="my_Index_id_nouseOrder">
+                            无效<span>(<span>0</span>)</span></a><a href="javascript:void(0)" class="track" name="my_Index_id_noCommentOrder">
+                           待评价商品<span>(<span>0</span>)</span></a>
+            </div>
+            <div class="wtitle_r">
+                <select id="posttime" name="posttime" style="display: inline-block;">
+                    <option selected="selected" value="2017-07-13,2017-08-11">
+                        30天内的订单</option>
+                    
+                    <option value="2017-01-01,2017-12-31">2017年的订单</option>
+                    <option value="2016-01-01,2016-12-31">2016年的订单</option>
+                      
+                </select>
+            </div>
+<form action="http://my.vancl.com/Order/OrderList4" data-ajax="true" data-ajax-begin="ClearList" data-ajax-loading="#LoadingDiv" data-ajax-method="post" data-ajax-mode="replace" data-ajax-success="UpdateSumTags" data-ajax-update="#orderlist" id="form0" method="post"><input id="datestring" name="datestring" type="hidden" value="
+                        30天内的订单"><input id="isPageing" name="isPageing" type="hidden" value="true"><input id="strtype" name="strtype" type="hidden" value="all">                <input type="hidden" value="全部订单(2)" id="orderstatus" name="orderstatus">
+                <input type="hidden" value="2017-07-13,2017-08-11" id="hidPostTime" name="hidPostTime">
+</form>      
+    </div>
+    <div id="orderlist"><style type="text/css">
+.VerticalContainer{ display:table;*position: relative;}
+.VerticalSubContainer{  *position: absolute;*top: 50%;display: table-cell;vertical-align: middle;}
+.VerticalSubContainerDel{  *position: absolute;*top: 50%;display: table-cell;vertical-align: middle;}
+.VerticalSubContainer_7{*margin:-8px 0 0 0 }
+.widdent_w1{*margin:0 0 0 25px;}
+.widdent_w1 span.s3{*left: -5px; *top: 35%; *position: absolute;}
+.VerticalItem{ *position: relative;*top: -50%;}
+.VerticalSubContainer ul li {
+    list-style: none outside none;
+}
+.VerticalSubContainer *{_position:relative;}
+.productImgBtn{float:left;}
+.widdent_w3{ *position: absolute;*top: 50%; *left:344px;}
+.widdent_w4{ *position: absolute;*top: 50%; *left:507px;}
+.widdent_w5{ *position: absolute;*top: 50%; *left:603px;}
+.widdent_info{ *position: relative;}
+.orderinfo{*position:relative;*z-index:4;}
+.Comment0903 .SubmitOk input{*position:static!important;}
+.haiwaigouion{width: 33px !important;height: 23px !important;background: url(http://i1.vanclimg.com/cms/20161219/formshouer.jpg) no-repeat 0 0;}
+.haiwaigou_popup{  position: absolute;
+    margin: 0;
+    padding: 0;
+    margin-left: 30px;
+    margin-top: 5px;
+    width: 234px;
+    z-index:100;
+    display: none;}
+   .haiwaigou_write
+   {
+       border: #a20000 1px solid;
+        border-top: none;
+        width: 222px;
+        background-color: #fff;
+        height: auto;
+        padding: 5px;
+        word-wrap: break-word;
+        color:Black;
+        background-color:White;
+    }
+    .hwg_hidden{display:none;}
+    .haiwaigoubox:hover .haiwaigou_popup{display:block;}
+</style>
+
+<div class="orderinfo">
+    <div style="vertical-align: middle; height: 30px;">
+        <input id="selectAllOrder" type="checkbox" value="全选" name="selectAllOrder" style="margin-right: 10px;
+            width: 13px; height: 13px; vertical-align: middle; line-height: 30px;"><label for="selectAllOrder" style="line-height: 30px;">全选</label>
+        <a id="delAllOrder" class="delAllOrder" href="javascript:void(0);">删除无效订单</a>
+    </div> 
+       
+    <input id="hidInCompleteCount" name="hidInCompleteCount" type="hidden" value="0">
+    <input id="hidCompleteCount" name="hidCompleteCount" type="hidden" value="0">
+    <input id="hidInvalidCount" name="hidInvalidCount" type="hidden" value="0">
+    <input id="PagingRecordCount" name="PagingRecordCount" type="hidden" value="0">
+    <?php foreach($arr as $v):?>
+        <div class="windent">
+            <div class="windent_t">
+
+                <div class="float_left">
+                    订单总金额<strong>￥<?=number_format($v['total'],2)?>元</strong>
+                </div>
+                <span class="ordercolor4 float_right"><span><?=date('Y-m-d H:i:s',$v['addtime'])?></span></span>
+            </div>
+                <div class="widdent_info" style="*z-index: 999;">
+    <div class="VerticalContainer" style="height: 63px;">
+        <div class="widdent_w1 VerticalSubContainer" style="*float: left;">
+            <ul class="VerticalItem">
+                    <li style="_margin-bottom: 8px;">                        
+                        <div class="wid_id">
+                           
+                            <span class="s4"></span>
+                            <a href="http://my.vancl.com/Order/OrderDetail/50150200040394" target="_blank" class="product_id"><?=$v['id']?></a></div>
+                        <div class="product">
+                            <ul class="product-ul" style="width: 195px; margin-bottom: 2px;">
+                                    <?php foreach($info as $k) :
+                                        if($k['oid']==$v['id']){
+                                    ?>
+                                    <li><a name="my_orderList_ol_productpic_0" href="<?=$k['gid']?>.html" target="_blank">
+                                        <img style="margin: 0px; display: inline;"  width="50px" height="50px" src="../Upload/<?=$k['pic']?>"></a><br>　　X<?=$k['num']?></li>
+                                        <?php
+                                    }
+                                    endforeach;
+                                        ?>
+                            </ul>
+                        </div>
+                        <div class="productImgBtn">
+                        </div>
+                    </li>
+                    <input id="hdlimit50150200040394" type="hidden" value="false">
+                    <input id="hdword50150200040394" type="hidden" value="false">
+            </ul>
+        </div>
+        <div class="widdent_w3 VerticalSubContainer" style="*float: left;">
+            <ul class="VerticalItem">
+                <li style="padding-bottom: 0px; padding-top: 0px;"><span><?php if($v['status']==1){
+                    echo '应付：';
+                }elseif($v['status']==2){
+                    echo '已付：';
+                }
+
+                    ?>                        <label class="ordercolor2">
+                            ￥<?=number_format($v['total'],2)?>元</label>
+                </span>
+                <?php if($v['status']==1){?>
+
+                <span style="height: 25px; width: 65px;"><a style="height:25px;" name="my_orderList_ol_pay" href="index.php?c=Orders&a=ok&oid=<?=$v['id']?>&total=<?=$v['total']?>" target="_blank">
+                    <img src="./Public/detail/btn2.jpg"></a></span>
+
+                <?php }elseif($v['status']==2){?> 
+
+                <font size="3" color="red">(待发货)</font>
+
+                <?php }elseif($v['status']==3){?>已发货 
+                
+                
+                <?php }else{?>
+                <font size="3" color="red">(已完成)</font> 
+                <?php }?>
+                    <div>
+                        <a style="cursor: pointer; display: inline-block; padding-top: 2px; padding-bottom: 4px;" class=" pay_mon ordercolor3"><?=$v['getman']?></a>
+                        <!--弹出层开始-->
+                        
+                        <!--弹出层结束-->
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="widdent_w4 VerticalSubContainer" style="*float: left;">
+            <ul class="VerticalItem">
+                <li style="padding-top: 0px; padding-bottom: 0px;"><span><?php if($v['status']==1){
+                    echo '待支付';
+                }elseif($v['status']==2){
+                    echo '待发货';
+                }elseif($v['status']==3){
+                    echo '待收货';
+                }else{
+                    echo '订单完成';
+                }
+
+                    ?></span>
+                        <a class="ordercolor2" name="my_orderList_ordertrack_50150200040394" id="50150200040394" onclick="javascript:$(document).mask(&#39;&#39;);OrderTrackLine(&#39;50150200040394&#39;,&#39;trackDiv&#39;,&#39;广东&#39;,&#39;10&#39;,&#39;all&#39;)">
+                            订单跟踪</a>
+                </li>
+            </ul>
+        </div>
+            <div class="widdent_w5 VerticalSubContainer" style="*float: left;">
+                <ul class="VerticalItem" id="operation50150200040394">
+                        <?php if($v['status']<3){?>
+                        <li style="margin: 0; padding: 0;"><a href="index.php?c=Orders&a=doDetail&id=<?=$v['id']?>" onclick="return confirm('确定删除?');">
+                            取消订单</a></li> 
+                            <?php }elseif($v['status']==3){?>
+<li style="margin: 0; padding: 0;"><a href="index.php?c=Orders&a=doDetail&id=<?=$v['id']?>" onclick="return confirm('确定删除?');">
+                            取消订单</a></li>
+                                <a href="index.php?c=Orders&a=getHuo&id=<?=$v['id']?>"><br><p class="time">确认收货</p></a>
+                            <?php }elseif($v['status']==4){?>
+                            <li style="margin: 0; padding: 0;"><a href="index.php?c=Orders&a=shows&id=<?=$v['id']?>" onclick="return confirm('确定删除?');">
+                            删除订单</a></li>
+                            <?php } ?>
+
+
+                                            </ul>
+            </div>
+    </div>
+                </div>
+            <div class="clear">
+            </div>
+        </div>
+        <div class="block10">
+        </div>
+        <?php endforeach;?>
+        <div class="block10">
+        </div>
+        <div class="rightpage">
+                <ul style="padding-right: 18px;">
+                    <li><span>1/1</span></li>
+ <li><a page="0" class="lpage"></a></li> <li><a page="2" class="rpage"></a></li>                </ul>
+                <span class="blank15"></span>        </div>
+<input id="hidReturnFormCodes" name="hidReturnFormCodes" type="hidden" value="">    
+</div>
+
+<div id="confrim" style="display: none">
+</div>
+</div>
+    <!--弹出层1begin-->
+   
+    <!--弹出层1end-->
+    <!--弹出层2begin-->
+    
+    <!--弹出层2end-->
+    
+</div>
+
+<input type="hidden" id="hidrel" value="my_order_recommendlist_">
+  <div class="myOrder_buyProductsBar" style=" margin-top:15px;">
+     <div class="mv_RecommendedTitle">
+          <h3 class="titname" fid="titname">购买相同商品的顾客还购买了：</h3>
+     </div>
+     <span class="blank20"></span>
+
+
+        <ul id="recommendlist" class="myOrder_buyProductsList" style="display: block;"><li><p class="pic"><a href="http://item.vancl.com/6375942.html" rel="undefined" class="track" name="my-recommend-first-productpicture" target="_blank" title="凡客T恤 熊本熊T14 黑色"><img src="./Public/detail/6375942-1j201706081710395370.jpg" width="130" height="130"></a></p><p class="prod_name"><a href="http://item.vancl.com/6375942.html" rel="undefined" class="track" name="my-recommend-first-producname" target="_blank" title="凡客T恤 熊本熊T14 黑色">凡客T恤 熊本熊T14 黑色</a></p> <p class="s_price">市场价：￥<span>78.00</span></p><p class="price">售价：￥78.00</p></li><li><p class="pic"><a href="http://item.vancl.com/6373887.html" rel="undefined" class="track" name="my-recommend-second-productpicture" target="_blank" title="凡客T恤 水柔棉 短袖圆领 男款 白色"><img src="./Public/detail/6373887-1j201608231038147430.jpg" width="130" height="130"></a></p><p class="prod_name"><a href="http://item.vancl.com/6373887.html" rel="undefined" class="track" name="my-recommend-second-producname" target="_blank" title="凡客T恤 水柔棉 短袖圆领 男款 白色">凡客T恤 水柔棉 短袖圆领 男款 白色</a></p> <p class="s_price">市场价：￥<span>168.00</span></p><p class="price">售价：￥168.00</p></li><li><p class="pic"><a href="http://item.vancl.com/6376035.html" rel="undefined" class="track" name="my-recommend-third-productpicture" target="_blank" title="凡客衬衫 泡泡纱 短袖 男款 蓝白格"><img src="./Public/detail/6376035-1j201704180943374781.jpg" width="130" height="130"></a></p><p class="prod_name"><a href="http://item.vancl.com/6376035.html" rel="undefined" class="track" name="my-recommend-third-producname" target="_blank" title="凡客衬衫 泡泡纱 短袖 男款 蓝白格">凡客衬衫 泡泡纱 短袖 男款 蓝白格</a></p> <p class="s_price">市场价：￥<span>198.00</span></p><p class="price">售价：￥198.00</p></li><li><p class="pic"><a href="http://item.vancl.com/6364205.html" rel="undefined" class="track" name="my-recommend-fourth-productpicture" target="_blank" title="凡客帆布鞋 男款 黑色"><img src="./Public/detail/6364205-1j201602031645295558.jpg" width="130" height="130"></a></p><p class="prod_name"><a href="http://item.vancl.com/6364205.html" rel="undefined" class="track" name="my-recommend-fourth-producname" target="_blank" title="凡客帆布鞋 男款 黑色">凡客帆布鞋 男款 黑色</a></p> <p class="s_price">市场价：￥<span>198.00</span></p><p class="price">售价：￥198.00</p></li><li><p class="pic"><a href="http://item.vancl.com/6376173.html" rel="undefined" class="track" name="my-recommend-fifth-productpicture" target="_blank" title="凡客休闲鞋 1 男款 白色"><img src="./Public/detail/6376173-1j201707141708264809.jpg" width="130" height="130"></a></p><p class="prod_name"><a href="http://item.vancl.com/6376173.html" rel="undefined" class="track" name="my-recommend-fifth-producname" target="_blank" title="凡客休闲鞋 1 男款 白色">凡客休闲鞋 1 男款 白色</a></p> <p class="s_price">市场价：￥<span>518.00</span></p><p class="price">售价：￥518.00</p></li><li><p class="pic"><a href="http://item.vancl.com/6364213.html" rel="undefined" class="track" name="my-recommend-sixth-productpicture" target="_blank" title="凡客帆布鞋 女款 黑色"><img src="./Public/detail/6364213-1j201602031645295558.jpg" width="130" height="130"></a></p><p class="prod_name"><a href="http://item.vancl.com/6364213.html" rel="undefined" class="track" name="my-recommend-sixth-producname" target="_blank" title="凡客帆布鞋 女款 黑色">凡客帆布鞋 女款 黑色</a></p> <p class="s_price">市场价：￥<span>198.00</span></p><p class="price">售价：￥198.00</p></li><li><p class="pic"><a href="http://item.vancl.com/6373619.html" rel="undefined" class="track" name="my-recommend-seven-productpicture" target="_blank" title="凡客帆布鞋 高帮 男款 黑色"><img src="./Public/detail/6373619-1j201602031645294621.jpg" width="130" height="130"></a></p><p class="prod_name"><a href="http://item.vancl.com/6373619.html" rel="undefined" class="track" name="my-recommend-seven-producname" target="_blank" title="凡客帆布鞋 高帮 男款 黑色">凡客帆布鞋 高帮 男款 黑色</a></p> <p class="s_price">市场价：￥<span>198.00</span></p><p class="price">售价：￥198.00</p></li><li><p class="pic"><a href="http://item.vancl.com/6373888.html" rel="undefined" class="track" name="my-recommend-eight-productpicture" target="_blank" title="凡客T恤 水柔棉 短袖圆领 男款 黑色"><img src="./Public/detail/6373888-1j201608231038151804.jpg" width="130" height="130"></a></p><p class="prod_name"><a href="http://item.vancl.com/6373888.html" rel="undefined" class="track" name="my-recommend-eight-producname" target="_blank" title="凡客T恤 水柔棉 短袖圆领 男款 黑色">凡客T恤 水柔棉 短袖圆领 男款 黑色</a></p> <p class="s_price">市场价：￥<span>168.00</span></p><p class="price">售价：￥168.00</p></li><li><p class="pic"><a href="http://item.vancl.com/6375086.html" rel="undefined" class="track" name="my-recommend-nine-productpicture" target="_blank" title="凡客衬衫 吉国武 免烫 温莎领 3.0 白色"><img src="./Public/detail/6375086-1j201609091543358284.jpg" width="130" height="130"></a></p><p class="prod_name"><a href="http://item.vancl.com/6375086.html" rel="undefined" class="track" name="my-recommend-nine-producname" target="_blank" title="凡客衬衫 吉国武 免烫 温莎领 3.0 白色">凡客衬衫 吉国武 免烫 温莎领 3.0 白色</a></p> <p class="s_price">市场价：￥<span>398.00</span></p><p class="price">售价：￥398.00</p></li><li><p class="pic"><a href="http://item.vancl.com/6364212.html" rel="undefined" class="track" name="my-recommend-ten-productpicture" target="_blank" title="凡客帆布鞋 女款 白色"><img src="./Public/detail/6364212-1j201602031645353988.jpg" width="130" height="130"></a></p><p class="prod_name"><a href="http://item.vancl.com/6364212.html" rel="undefined" class="track" name="my-recommend-ten-producname" target="_blank" title="凡客帆布鞋 女款 白色">凡客帆布鞋 女款 白色</a></p> <p class="s_price">市场价：￥<span>198.00</span></p><p class="price">售价：￥198.00</p></li></ul>
+        <input type="hidden" id="product-code-list" value="6375278,6376168,6376169">
+        <input type="hidden" id="rows" value="50">
+        <input type="hidden" id="userid" value="80447087">
+        <input type="hidden" id="recm-type" value="1">
+        <input type="hidden" id="type" value="BuyAndBuy">
+        <input type="hidden" id="recommandtype" value="order"> 
+        <input type="hidden" id="recommandpostion" value="rp_myvancl_order">          
+        <span class="blank10"></span>
+</div>
+<!--我的订单 为您推荐-->
+<div style="float:right;width:778px;margin-top:5px; display:none;">
+    <div class="RecommendedTitle_Pages"> 
+        <span id="page-info"><label>1</label><span>/1</span></span><span id="pagination"><div class="pagination"><span class="prev track" name="my-recommend-previous page"> </span><span class="next track" name="my-recommend-next page"> </span></div></span>
+    </div>
+</div>
+<script type="text/javascript" src="./Public/detail/js(2).ashx"></script>
+
+
+<input type="hidden" id="hidFormCodeM" value="0">
+<!--[if lte IE 6]><script type="text/javascript"> isIE6 = true;</script> <![endif]-->
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#MvcPager_Ctrl0_pib").css("width", "16px");
+        $("#User_Order_List").addClass("current"); //控制CSS
+        $("#UserMap").html("<a href='/order'>我的订单</a>"); //控制CSS
+        $("#MvcPager_Ctrl0_pib").css("width", "16px");
+        $("#posttime").val($("#posttime option:eq(0)").val());
+        if ($("#dingzhiType").val() == "dingzhi") {
+            getDingzhiOrderList(); //初始化订单列表
+            $("#UserMap").html("<a href='/order?type=dingzhi'>我的定制订单</a>"); //控制CSS
+        } else {
+            getLabelCount(); //初始化订单列表标签数量
+            getInitOrderList(); //初始化订单列表
+            getLabCommentProductCount();
+        }
+
+    });
+
+    function getDingzhiOrderList() {
+        $('#LoadingDiv').show();
+        var varsion = (Math.random() * 100000000).toString().substring(0, 6);
+        var url = "/order/CustomOrderList?id=1&ver=" + varsion;
+
+        //合并订单修改2012/10/23 start
+        if ($('#hidFormCodeM').val() != 0) {
+            url += "&formCodeM=" + $('#hidFormCodeM').val();
+        }
+        //合并订单修改2012/10/23 end
+
+        $.get(url, function (data) {
+            $("#orderlist").html(data);
+            $('#LoadingDiv').hide();
+        }
+        );
+    }
+
+
+    function getLabCommentProductCount() {
+        var url = "/Comment/AjaxGetCanCommentProductCount";
+        $.ajax({
+            type: "GET",
+            cache: false,
+            dataType: "json",
+            url: url,
+            success: function (data) {
+                if (data.success == true) {
+                    $("#myTab a").eq(4).find("span").html("").html("(<span>" + data.count + "</span>)")
+                }
+            }
+        });
+    }
+</script>
+<br>
+
+<script src="./Public/detail/js(3).ashx" type="text/javascript"></script>
+<script type="text/javascript" src="./Public/detail/js(4).ashx"></script>
+
+
+
+
+
+
+<div class="blank0" style="height:32px;"></div><div class="vanclFoot" style="margin-top:0px;"><div class="vanclCustomer publicfooterclear"><ul><li><a href="http://help.vancl.com/Home/contact" rel="nofollow" target="_blank"><p class="onlineCustomer"><img src="./Public/detail/onlinecustomer.png" style="width:auto;height:auto;"></p><p class="onlineTime"> 7X9小时在线客服</p></a></li><li><a href="http://help.vancl.com/Category/43-1.html" rel="nofollow" target="_blank"><p class="seven"><img src="./Public/detail/seven.png" style="width:auto;height:auto;"></p><p> 7天内退换货</p><p> 购物满199元免运费</p></a></li><li class="twocode"><p><img src="./Public/detail/2014_8_29_16_39_33_7709.jpg" style="width: 104px; height: 104px;"></p><p> 扫描下载<em>凡客</em>客户端</p></li></ul></div><div class="vanclOthers publicfooterclear"><ul><li><a href="http://www.vancl.com/help/about.htm" target="_blank">关于凡客</a></li><li><a href="http://help.vancl.com/Content/1.html" target="_blank">新手指南</a></li><li><a href="http://help.vancl.com/category/transfer" target="_blank">配送范围及时间</a></li><li><a href="http://help.vancl.com/Category/31-1.html" target="_blank">支付方式</a></li><li><a href="http://help.vancl.com/Category/43-1.html" target="_blank">售后服务</a></li><li class="none"><a href="http://help.vancl.com/" target="_blank">帮助中心</a></li></ul></div></div><div id="footerArea" class=""><div class="footBottom"><div class="footBottomTab"><p> Copyright 2007 - 2016 vancl.com All Rights Reserved 京ICP证100557号 京公网安备11011502002400号 出版物经营许可证新出发京批字第直110138号</p><p> 凡客诚品（北京）科技有限公司</p></div></div><span class="blank20"></span><div class="subFooter"><a rel="nofollow" href="https://search.szfw.org/cert/l/CX20111229001302001330" class="redLogo" target="_blank"></a><span class="costumeOrg"></span><a rel="nofollow" href="http://www.315online.com.cn/member/315090053.html" class="wsjyBzzx" target="_blank"></a><a rel="nofollow" href="http://www.hd315.gov.cn/beian/view.asp?bianhao=010202010081900017" class="vanclMsg" target="_blank"></a><a class="vanclqingNian" target="_blank" href="http://www.vancl.com/help/about_2.htm" rel="nofollow"></a><a href="http://trust.cctvmall.cn/reg/templates/brandtem1010.html" style="display: inline-block;" target="_blank"><img style="width: 120px; height: 39px;" src="./Public/detail/kexin_brand_for_others.png"></a><div class="blank0"></div></div></div><div class="BayWindow" style="position: fixed; right: 10px; bottom: 20px; z-index:10"><ul><li class="downApp"><a href="http://m.vancl.com/html/app.html#ref=hp-hp-head-mobile-v:n" target="_blank"></a></li><li class="online"><a href="http://imweb.vancl.com/" target="_blank"></a></li><li class="BlackTop"><a href="javascript:;" onclick="javascript:document.getElementById(&#39;headerTopArea&#39;).scrollIntoView()"></a></li></ul></div><script type="text/javascript"> $(document).ready(function () { var hostname = window.location.host; if (hostname != "demowww.vancl.com" && hostname != "www.vancl.com" && hostname != "www.fanke.com") { $(".subnavCon em").css({ display: "block" }); $(".subnavCon").hover(function () { $(this).find("em").addClass("emtop"); $(this).parent().find(".categoryList").show(); }, function () { $(this).find("em").removeClass("emtop"); $(this).parent().find(".categoryList").hide(); }); $(".categoryList").hover(function () { $(this).show(); }, function () { $(this).hide(); $(this).parent().find(".subnavCon em").removeClass("emtop"); }); } }); setTimeout(function () { var bp = document.createElement('script'); bp.src = '//push.zhanzhang.baidu.com/push.js'; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(bp, s); }, 1000); $(function () { $(".subNav").hide(); $(".navlist ul li").hover(function () { $(this).find(".subNav").stop(true, true); $(this).find(".subNav").slideDown(); }, function () { $(this).find(".subNav").stop(true, true); $(this).find(".subNav").slideUp(); }); })</script>    </div>
+    <div id="WeixinBox" style="position: fixed; bottom: 0px; z-index: 1000; width: 146px;">
+        <img src="./Public/detail/tc.png" alt="关闭" title="关闭" style="float:right;cursor:pointer;" onclick="closeWeixin();">
+        <span class="blank0"></span>
+        <img src="./Public/detail/vanclqrcode2.jpg" alt="凡客二维码" title="凡客二维码" style="width:144px;border:1px solid #EFEFEF;">
+        
+              
+    </div>
+    <script type="text/javascript" src="./Public/detail/js(5).ashx"></script>
+    
+
+
+<div id="imdiv" style="width:112px; height:25px; padding-top:3px;float:right; background:url(http://i.vanclimg.com/others/2011/11/9/bg.gif) center no-repeat; position:fixed;_position:absolute;_bottom:auto; right:0; bottom:0;_top:expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop,10)||0)-(parseInt(this.currentStyle.marginBottom,10)||0)))"><img hspace="6" src="./Public/detail/icon.gif" align="absmiddle"><a style="padding-right:8px;" href="http://imweb.vancl.com/" id="impage" target="_blank">在线客服</a><a href="http://my.vancl.com/Order/#"><img src="./Public/detail/top.gif" hspace="3" align="absmiddle"></a></div><img id="weblog_track" src="./Public/detail/track.aspx" style="display: none;"></body></html>

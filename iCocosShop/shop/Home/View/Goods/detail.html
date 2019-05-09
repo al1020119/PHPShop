@@ -1,0 +1,194 @@
+<!doctype html>
+<html>
+<head>
+    <title>凡客衬衫 弹力修身 小方领 藏蓝 - 男装 衬衫 长袖衬衫 - VANCL 凡客诚品</title>
+    <meta charset="utf-8">
+    <meta name="keywords" content="凡客衬衫 弹力修身 小方领 ，男装 衬衫 长袖衬衫，藏蓝，商务，VANCL凡客诚品">
+    <meta name="description" content="，VANCL凡客诚品网上购物、送货上门、货到付款，无条件退换货。">
+    <link href="./Public/css/detail.css" rel="stylesheet">
+    <link href="./Public/image">
+    <link rel="icon" href="./Public/image/favicon.ico">
+
+</head>
+<body>
+<div container>
+        <!-- 头部开始 -->
+    <?php include'./Public/header.html';?>
+       <!-- 头部结束 -->
+    <?php include'./Public/nav.html';?>
+       <!-- 主体开始 -->
+    <div class="main">
+        <!-- <div class="m-list">
+            <a href="" title="首页">首页</a>
+            <span>&gt;</span>
+            <a href="" title="男装">男装</a>
+            <span>&gt;</span>
+            <a href="" title="衬衫">衬衫</a>
+            <span>&gt;</span>
+            <a href="" title="长袖衬衫">长袖衬衫</a>
+            <span>&gt;</span>
+            <span>凡客衬衫 弹力修身 小方领</span>
+        </div> -->
+        <div class="t-title">
+            <h2 class="left">商品详情
+                <span class="newy">新年购 八折优惠</span>
+            </h2>
+            <div class="right">
+                <ul>
+                    <li><a>购买指南</a>|</li>
+                    <li><a>模特搭配</a>|</li>
+                    <li><a>版型工艺</a>|</li>
+                    <li><a>设计细节</a>|</li>
+                    <li><a>洗涤保养</a>|</li>
+                    <li><a>评论</a>|</li>
+                    <li><a>提问</a></li>
+                </ul>
+            </div>
+        </div><br>
+        <span class="newy" >
+        <font size="4" >首页---></font>
+        <?php $qq=array_reverse($qq);
+
+        
+        //var_dump($qq);
+        foreach($qq as $v):
+        ?>
+           
+         
+        <font size="4"><a href="index.php?c=Goods&a=index&tid=<?=$v['id']?>"><?=$v['name']?></a>---></font>
+    <?php endforeach;?>
+        <font size="4"><?=$info['name']?></font>
+        </span>
+
+        <div class="goods">
+            <div class="goods-left left">
+                
+                <div class="goods-bimg right">
+                    <img src="../Upload/<?=$info['pic']?>" width="400" >
+                </div>
+            </div>
+            <div class="goods-right right">
+                <div class="price" style="height:150px">
+                <br>
+                    <span>商品名:</span><br>
+                    <font style="font-size:66px;color:#A10000"><?=$info['name']?></font>
+                </div>
+                
+                <div class="price">
+                    <span>特惠价：￥</span>
+                    <strong><?=number_format($info['price'])?>元</strong>
+                    <span>充100返100，点击充值</span>
+                    <p>原价：<s><?=number_format($info['price']/0.8)?>元</s></p>
+                </div>
+                
+                
+                <div class="coun">
+                <hr>
+                
+                <br>　　　　　　　　　　　
+                <span>出售量:</span>
+                <font style="color:#A10000"><?=$info['buynum']?></font>件　　｜　
+                <span>浏览量</span>
+                <font style="color:#A10000"><?=$info['clicknum']?></font> 　｜　
+                <span>送积分</span>
+                <font style="color:#A10000"><?=$info['price']*0.1?></font>
+                <br>
+                <br>
+                <hr>
+                <br>
+                    
+                </div>
+                <span>库存</span>
+                <span class="status">
+                <?php 
+                    if($info['reserve'] > 0){
+                        echo $info['reserve']."件 现在有货";
+                    }else{
+                        echo "缺货状态";
+                    }
+                ?></span><br>
+                <form action="index.php" method="get">
+                <input type="hidden" name="c" value="Goods">
+                <input type="hidden" name="a" value="addShopcar">
+                <input type="hidden" name="id" value="<?=$info['id']?>">
+                数量：<select name="num" class="count">
+                            <?php for($i=1;$i<=$info['reserve'];$i++):?>
+                             <option value="<?=$i?>"><?=$i?></option>
+                            <?php endfor;?>
+                          </select>
+                 　　　　　　　　　<input class="add" type="submit" value="" >
+                <div>
+                
+                
+                    
+                    <br>
+                    <a href="index.php?c=Goods&a=shopcar"><p class="time">立即结算</p></a>
+                </div>
+                <div class="tips">
+                    <span class="yhts">优惠提示</span>  
+                    <ul>
+                        <li>全场购物满199元免运费</li>
+                    </ul>
+                </form>
+
+                </div> 
+                <br>
+                <br>
+            </div>
+        </div>
+
+        <!--浏览历史-->
+        <div   style="position:fixed;left:0px;top:218px;border:1px solid lightgray;width:110px;height:500px;overflow:auto;background:white">
+    <center><font color="#b81c22">最近还看了</font><a href="index.php?c=Goods&a=delSee"><button style="background: #A10000 url(overlay.png) repeat-x;
+    display: inline-block;
+    padding: 5px 10px 6px;
+    color: #fff;
+    text-decoration: none;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.6);
+    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.6);
+    text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
+    border-bottom: 1px solid rgba(0,0,0,0.25);
+    position: relative;
+    cursor: pointer">清空浏览</button></a></center>
+    <hr>
+    <center>
+    <ul >
+    <?php   
+            $goods = new Model('goods');
+            $list = $goods->order('id desc')->select();
+            $see = array_reverse($_SESSION['see']);
+    foreach($see as $v):
+    foreach($list as $val):
+        if($val['id'] ==$v):
+    ?>
+        <li><hr><a href="<?=$val['id']?>.html" ><img src="../Upload/<?=$val['pic']?>" width="80" height="80"></a><br><a href="index.php?c=Goods&a=detail&id=<?=$val['id']?>"><font size="2">名称:<?=$val['name']?></font></a>
+                            
+                            <div>
+                                <span><font size="2">售价￥<?=number_format($val['price'],2)?></font></span>
+                            </div>
+                            
+        </li>
+        <?php   endif;
+                endforeach;
+                endforeach;
+
+
+        ?>
+    </ul>
+    </center><?php if(@$_SESSION['see']!=[]):?>
+    
+        <?php endif;?>
+    </div>
+
+    
+
+    <?php //var_dump($_SESSION['see']);?>
+    
+    <?php
+    include './Public/footer.html';
+    ?>
+</div>
+</body>
+</html>

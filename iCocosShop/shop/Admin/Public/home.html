@@ -1,0 +1,39 @@
+<?php 
+include'./Public/header.html';
+//var_dump($_SESSION);
+
+include'./Public/nav.html';
+
+?>
+
+	
+<div class="row-fluid" id="nav">	
+	<div class="span8 offset2">
+		
+	</div>
+</div>
+
+	<center><h1><font color="#08c">欢迎来到,后台管理系统!</font></h1><br>
+	<?php if($_SESSION['username']['id']!=59){?>
+	<font size="7">当前身份为:</font><font size="7" color="red">客服</font><br><br>
+	<font size="7">权限:</font><br><br>
+	
+		<li><font color="#A10000">商品管理</font></li>
+		<li><font color="#A10000">分类管理</font></li>
+		<li><font color="#A10000">轮播图管理</font></li>
+		<li><font color="#A10000">订单管理</font></li>
+	
+	<?php }else{?>
+	<font size="7">当前身份为:</font><font size="7" color="orange" face="宋体">上帝</font><br><br>
+	<font size="7">权限:</font><font size="7" color="orange" face="宋体">至高无上！</font><br>
+	<?php } ?>
+
+
+
+
+	</center>
+
+
+</div>
+</div>
+<?php include './Public/footer.html';?>

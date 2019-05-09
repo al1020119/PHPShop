@@ -1,0 +1,104 @@
+<?php include './Public/header.html';
+//var_dump($arr);
+include './Public/nav.html';
+?>
+    
+    
+    <div class="row-fluid" id="main">
+        <div class="span8 offset2"> 
+            <form action="index.php?c=User&a=doSave" method="post" class="form-horizontal ">
+                <h3>修改个人基本信息</h3>
+                <input type="hidden" name="id" value="<?=$arr['id']?>">
+                <div class="control-group">
+                    <label class="control-label" for="username">姓名</label>
+                    <div class="controls">
+                        <input type="text" name="username" id="username" value="<?=$arr['username']?>">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="pwd">密码</label>
+                    <div class="controls">
+                        <input type="password" id="pwd" name="pwd" placeholder="密码">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="pwd2">确认密码</label>
+                    <div class="controls">
+                        <input type="password" id="pwd2" name="pwd2" placeholder="确认密码">
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label" for="pwd2">性别</label>
+                    <div class="controls">
+                        <label class="radio inline">
+                          <input checked name="sex" type="radio" id="inlineCheckbox1" value="1"> 男
+                        </label>
+                        <label class="radio inline">
+                          <input <?=($arr['sex']==='0')?'checked':''?> name="sex" type="radio" id="inlineCheckbox2" value="0"> 女
+                        </label>
+                        <label class="radio inline">
+                          <input <?=($arr['sex']==='2')?'checked':''?> name="sex" type="radio" id="inlineCheckbox3" value="2"> 妖
+                        </label>
+                        <label class="radio inline">
+                          <input <?=($arr['sex']==='3')?'checked':''?> name="sex" type="radio" id="inlineCheckbox3" value="3"> gay
+                        </label>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label" for="age">年龄</label>
+                    <div class="controls">
+                        <input max="250" min="0" value="<?=$arr['age']?>" type="number" id="age" name="age" placeholder="年龄">
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label" for="email">邮箱</label>
+                    <div class="controls">
+                        <input value="<?=$arr['email']?>" type="email" id="email" name="email" placeholder="邮箱">
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label" for="phone">手机号</label>
+                    <div class="controls">
+                        <input value="<?=$arr['phone']?>" type="number" id="phone" name="phone" placeholder="手机号">
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label" for="inputEmail">角色</label>
+                    <div class="controls">
+                        <select name="role">
+                            <option value="1">普通会员</option>
+                            <option <?=$arr['role']==2?'selected':''?> value="2">管理员</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label" for="inputEmail">状态</label>
+                    <div class="controls">
+                        <select name="status">
+                            <option value="1">正常</option>
+                            <option <?=$arr['status']==2?'selected':''?> value="2">禁用</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <div class="controls">
+                        <label class="checkbox">
+                            &nbsp;
+                        </label>
+                        <button class="btn btn-large btn-primary form-submit" type="submit">&nbsp;&nbsp;提交&nbsp;&nbsp;</button>
+                        <a class="btn btn-large default form-submit" href="index.php?c=Type">&nbsp;&nbsp;返回&nbsp;&nbsp;</a>
+                    </div>
+                </div>
+            </form>         
+        </div>
+    </div>
+    
+<?php include './Public/footer.html';?>
+    

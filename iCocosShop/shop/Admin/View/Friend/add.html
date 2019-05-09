@@ -1,0 +1,58 @@
+<?php include './Public/header.html';
+include './Public/nav.html';
+?>
+    
+    
+    <div class="row-fluid" id="main">
+        <div class="span8 offset2"> 
+            <form action="index.php?c=Friend&a=doAdd" method="post" class="form-horizontal " enctype="multipart/form-data">
+                <h3>友情添加</h3>
+                
+
+                <div class="control-group">
+                    <label class="control-label" for="name">友情名</label>
+                    <div class="controls">
+                        <input type="text" name="name" id="name" placeholder="友情名">
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label  class="control-label" for="file">友情图片</label>
+                    <div class="controls">
+                        <input type="file" id="file" name="pic" >
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label  class="control-label" for="orders">友情排序</label>
+                    <div class="controls">
+                        <input type="text" id="orders" name="orders" placeholder="友情排序" min=0>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label" for="link">友情链接</label>
+                    <div class="controls">
+                        <input type="text" name="link" id="link" placeholder="友情链接">
+                    </div>
+                </div>
+              
+         
+
+                
+
+                <div class="control-group">
+                    <div class="controls">
+                        <label class="checkbox">
+                            &nbsp;
+                        </label>
+                        <button class="btn btn-large btn-primary form-submit" type="submit">&nbsp;&nbsp;提交&nbsp;&nbsp;</button>
+                        <a class="btn btn-large default form-submit" href="index.php?c=Friend">&nbsp;&nbsp;返回&nbsp;&nbsp;</a>
+                    </div>
+                </div>
+            </form>         
+        </div>
+    </div>
+    
+<?php include './Public/footer.html';?>
+    

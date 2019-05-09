@@ -1,0 +1,92 @@
+<?php include './Public/header.html';
+//var_dump($arr);
+include './Public/nav.html';
+?>
+    
+    
+    <div class="row-fluid" id="main">
+        <div class="span8 offset2"> 
+            <form action="index.php?c=Goods&a=doEdit" method="post" class="form-horizontal " enctype="multipart/form-data">
+                <input type="hidden" value="<?=$_GET['id']?>" name='id'>
+                <h3>商品编辑</h3>
+                <div class="control-group">
+                    <label class="control-label" for="pwd">分类</label>
+                    <div class="controls">
+                        <select name="tid">
+                            <option value="">--请选择--</option>
+                    <?php   
+                        foreach ($types as $k=>$v):
+                            $num = substr_count($v['path'],',');
+                            $son =$type->where('pid='.$v['id'])->select();
+
+                            $dis = empty($son)?'':'disabled';
+                            $str = str_repeat('　　',$num-1);
+                    ?>
+                        <option <?=$dis?> <?=$arr['tid']==$v['id']?'selected':''?> value="<?=$v['id']?>"><?=$str.'|----'.$v['name']?></option>
+                    <?php endforeach;?>
+                        </select>
+                    </div>
+                </div>
+
+
+                <div class="control-group">
+                    <label class="control-label" for="name">商品名</label>
+                    <div class="controls">
+                        <input type="text" name="name" id="name" value="<?=$arr['name']?>" required/>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label  class="control-label" for="file">商品图片</label>
+                    <div class="controls">
+                        <a href="../Upload/<?=$arr['pic']?>"><img src="../Upload/<?=$arr['pic']?>" width=100 height=100/></a>
+                        <label for="file" display="none">选择文件修改图片</label>
+                        <input type="file" id="file" name="pic" />
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label  class="control-label" for="price">商品价格</label>
+                    <div class="controls">
+                        <input type="text" id="price" name="price" value="<?=$arr['price']?>">
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label" for="reserve">商品库存</label>
+                    <div class="controls">
+                        <input type="text" name="reserve" id="reserve" value="<?=$arr['reserve']?>">
+                    </div>
+                </div>
+              
+         
+
+                
+                <div class="control-group">
+                    <label class="control-label" for="inputEmail">商品状态</label>
+                    <div class="controls">
+                        <select name="status">
+                            <option <?=$arr['status']==1?'selected':''?> value="1">新添加</option>
+                            <option <?=$arr['status']==2?'selected':''?> value="2">在售中</option>
+                            <option <?=$arr['status']==3?'selected':''?> value="3">已下架</option>
+                            
+                            
+                        </select>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <div class="controls">
+                        <label class="checkbox">
+                            &nbsp;
+                        </label>
+                        <button class="btn btn-large btn-primary form-submit" type="submit">&nbsp;&nbsp;提交&nbsp;&nbsp;</button>
+                        <a class="btn btn-large default form-submit" href="index.php?c=Goods">&nbsp;&nbsp;返回&nbsp;&nbsp;</a>
+                    </div>
+                </div>
+            </form>                 
+        </div>
+    </div>
+    
+<?php include './Public/footer.html';?>
+    

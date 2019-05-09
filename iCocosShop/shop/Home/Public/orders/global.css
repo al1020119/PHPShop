@@ -1,0 +1,326 @@
+﻿body
+{
+    font: 12px Arial, Helvetica, sans-serif, 宋体;
+    width: 100%;
+    color: #333;
+}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, img
+{
+    margin: 0;
+    padding: 0;
+}
+fieldset,img
+{
+    border:0 none;
+}
+img,input
+{
+    vertical-align:middle;
+}
+a{ cursor:pointer; }
+a:link, a:visited
+{
+    text-decoration: none;
+    color:#333;
+}
+a:hover
+{ color:#a10000; }
+table
+{
+    border-collapse: collapse;
+    padding: 0;
+    border-spacing: 0;
+    width:100%;
+}
+li
+{
+    list-style: none;
+}
+em, strong, th, h1, h2, h3, h4, h5, h6
+{
+    font-style: normal;
+    font-weight: bold;
+}
+
+.clearfix:after
+{
+    content:".";
+    display:block;
+    visibility:hidden;
+    height:0;
+    clear:both;
+}
+
+.clearfix
+{
+    *height:1%;/* ie5.5,6,7 hack */
+}
+.clear
+{
+    display:block;
+    font-size: 0;
+    height:0;
+    line-height: 0;
+    visibility:visible;
+    clear:both;
+}
+
+
+#wrapper
+{
+    margin: 0 auto;
+    width: 980px;
+}
+#content
+{
+    margin-top: 20px;
+}
+#location, .v-dialog-close a, .v-dialog-icon
+{
+    background: url(/images/sprite-base.gif) no-repeat 0 -255px;    
+}
+.loading span
+{
+    background: url(/images/icon-loading-16px.gif) no-repeat 0 0;    
+}
+
+a.logo
+{
+    float: left;
+    display: block;
+    height: 39px;
+    width: 311px;
+}
+#header
+{
+    border-bottom: 1px solid #7A7F89;
+    padding-top: 16px;
+}
+.help-center, .account
+{
+    float: right;
+    line-height: 39px;
+}
+.account
+{
+    margin-right: 40px;
+    color: #666;
+    display:block;
+}
+.mycart .account
+{
+    display:block;    
+}
+.account a, a.login
+{
+    color: #a10000;
+    padding: 0 5px;
+}
+#location
+{
+    background-position: right -91px;
+    height: 35px;
+    width: 560px;
+    margin-top: 10px;
+}
+.checkout #location 
+{
+    width: 557px;
+    background-position: right -126px;
+}
+#location em, #location span
+{
+    color: #666;
+    display: inline-block;
+    font-weight: bold;
+    line-height: 35px;
+    text-align: center;
+    width: 180px;
+}
+#location em
+{
+    color: #fff;    
+}
+
+.help
+{
+    padding: 15px 30px 15px 30px;
+    overflow: hidden;
+}
+.question
+{
+    float: left;
+}
+.suggest
+{
+    float: right;
+}
+.about
+{
+    border-bottom: 1px solid #9CA7BD;
+    border-top: 1px solid #9CA7BD;
+    line-height: 22px;
+    padding: 10px 0 10px 25px;
+}
+.about h4
+{
+    color: #7E7E7E;
+    font-weight: bold;
+    font-size: 12px;
+}
+#footer
+{
+    color: #999;
+    padding: 10px 0;
+    text-align: center;
+    margin-bottom: 20px;
+}
+#footer p
+{
+    margin-bottom: 20px;
+    text-align: center;
+}
+.ectrustprc, .costumeorg, .online315
+{
+    display: inline-block;
+    margin-right: 20px;
+}
+.ectrustprc
+{
+    width: 156px;
+    height: 46px;
+}
+.costumeorg
+{
+    width: 156px;
+    height: 46px;
+}
+.online315
+{
+    width: 96px;
+    height: 42px;
+}
+
+.v-dialog
+{
+    background-color: White;
+    border: 1px solid #A10000;
+    width: 200px;
+}
+.v-dialog h4
+{
+    color: White;
+    background: url(/images/others/dpbox.gif) repeat-x scroll 0 0 transparent;
+    height: 23px;
+    padding:0 5px;
+    overflow:hidden;
+}
+.v-dialog span
+{
+    line-height: 23px;
+    float:left;
+}
+.v-dialog .v-dialog-close{float:right; font-weight:normal; cursor:pointer;}
+.v-dialog-close a
+{
+    background-position: -71px -21px;
+    display: inline-block;
+    height: 11px;
+    width: 11px;
+    margin-right:5px;
+    margin-bottom:-1px;
+}
+.v-dialog-content
+{
+    padding: 20px 10px;
+    overflow: hidden;
+    line-height:19px;
+}
+.v-dialog-icon
+{
+    background-position: -81px 0;
+    float: left;
+    width:18px;
+    height:19px;
+}
+.loading
+{
+    background-color: #7a7f89;
+    border: 1px solid #999;
+    text-align: center;
+    padding:5px 0;
+    display: none;
+    color: #fff; 
+    width:120px;
+    position:fixed;
+    _position:absolute;
+    left:50%;
+    top:50%;
+    margin-left:-60px;
+    margin-top:-8px;
+    z-index:9999;
+}
+.loading span
+{
+    display: inline-block;
+    height: 16px;
+    margin-right: 5px;
+    vertical-align: middle;
+    width: 16px;   
+}
+.loading b
+{
+    font-weight:normal;    
+}
+
+.box_3,.box_5,.box_10,.box_15,.box_20,.box_25
+{
+    height:3px;
+    line-height:0;
+    font-size:0;
+    clear:both;
+    display:block;
+}
+.box_5
+{
+    height:5px;
+}
+.box_10
+{
+    height:10px;
+}
+.box_15
+{
+    height:15px;
+}
+.box_20
+{
+    height:20px;
+}
+.box_25
+{
+    height:25px;
+}
+
+.BuyTips {
+    background: url("../images/tips.gif") no-repeat scroll 5px center #FFF6F7;
+    border:1px #cc9998 solid;
+    height: 22px;
+    line-height: 22px;
+    padding: 1px 5px 1px 25px;
+    width: auto;
+    text-indent:25px;
+    color:#a10000;
+    display:none;
+}
+.giftCardTip
+{
+    float:left;
+    text-indent:0;
+    margin-left:5px;
+    margin-top:8px;
+}
+.ui-dialog .ui-dialog-buttonpane button
+{
+   text-align:center;
+}

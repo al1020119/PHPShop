@@ -1,0 +1,196 @@
+img{ border:none;}
+ol,li{ list-style:none;}
+*{margin:0; padding:0; font-family:"Microsoft Yahei"; color:#000; font-size:12px;}
+
+.clear{ clear:both;}
+.left{ float:left;}
+.right{ float:right;}
+a{ color:#000; text-decoration:none;}
+a:hover{ color:#CC0000; text-decoration:underline;}
+
+.wrapper { 
+    width:1200px; height:100%; margin:0 auto;
+}
+.regist {
+     width:100%; margin:30px 0 0 0;
+    }
+.regist h1{
+    height: 35px;
+    width:415px; float:right;
+    line-height: 35px;
+    margin:0 100px 0 0;
+    border-bottom: 2px solid #b81e20;
+    font-size: 20px;
+    color: #a2a2a2;
+    font-weight: bolder;}
+    
+.regist h1 span{
+    font-size:14px;
+    float:right
+}
+
+.regist h1 span a{
+    color:#b52024;
+    margin:0 0 0 3px
+}
+
+.content_left{
+    width: 415px;float: right;margin: 10px 95px 0 0;    
+}
+.tag{  
+    width: 100%;
+    display:none;
+    height: 45px;
+    line-height: 45px;
+    padding-bottom: 10px;}
+
+
+
+.submitingStyle{ color:#656565;}
+.content_right  {   
+    width: 465px;
+    height: 500px;
+    float: left;
+    margin: 0 0 0 130px;}
+#Img1,.change-img
+{
+    float:left; 
+    cursor:pointer;   
+}
+.change-img:hover
+{
+    text-decoration:none;
+}
+.nextcode,.change
+{
+    line-height:12px;
+    display:block;
+    width:37px;
+    color:Gray;
+}
+.change
+{
+    color:#A00002;
+}
+.hiddenSubmit{  visibility:hidden; display:none;}
+.showSubmit{ visibility:visible; display:block}
+
+.tips7{
+    padding-left:29px;
+    text-indent:0px; 
+    width:180px; 
+    height:50px; 
+    margin-top:-5px; 
+    line-height:16px;
+}
+.phonelogin{ line-height:15px;height:15px;text-decoration:none; color:#7030A0}
+.grayback{ border:1px solid #F2F2F2; border-bottom:2px solid #F2F2F2;  border-right:2px solid #F2F2F2; background-color:#FAFAFA;  }
+.regtips {
+    border: 1px solid #36689B;
+    color: #434343;
+    float: left;
+    height: 37px;
+    line-height: 17px;
+    margin-top: 2px;
+    padding-left: 3px;
+    padding-top: 3px;
+    width: 238px;
+}
+
+
+.Rclear{line-height:0; font-size:0; clear:both; display:block;}
+#livalidatecode label{margin-top:15px;}
+.v2regListInfo_rtCont{ width:415px;height:auto;}
+.reginput_01,.reginput_02{border:1px solid #A5AFC3; float: left; height:20px; line-height:20px; margin-right:8px; width:198px;}
+.reginput_02{width:48px;margin-top:16px;}
+.v2reg_tips01{
+    line-height: 16px;
+    color: #999;
+    height: 16px;
+    position: absolute;
+    left: 0px;
+    top: 47px;
+    z-index: 20;    
+}
+.v2reg_bg1{  border:1px solid #fff}
+#v2regListInfo_bar li{ clear:both; /*padding:5px 0;*/ margin-top:15px; }
+
+.v2reg_bt span{    color: #9d9d9d;
+    font-size: 14px;
+    font-weight: bolder;
+    line-height: 12px;
+    margin: 0 0 10px 0;}
+.v2reg_bt span a{font-size:14px;color:#b52024!important;font-weight:bolder;}
+.v2reg_Class{float:left;}
+
+.box5{height:0px; line-height:0; font-size:0; clear:both; overflow:hidden;}
+.asPhoneregBtn{ width: 97px;
+    height: 45px;
+    text-align: center;
+    line-height: 45px;
+    /* background-position:0 -354px; */
+    background: #f5f5f5;
+    color: #b52024!important;
+    border: solid 1px #cbcbcb;
+    display: block;
+    float: left;
+    margin: 0 0 0 10px;
+    font-weight: bolder;
+    } 
+.newtxt{height: 45px;
+    width: 360px;
+    border: solid 1px #cbcbcb;
+    position: relative;
+    overflow: hidden;
+    }
+.newtxt input{ 
+    height:45px; 
+    line-height:45px; 
+    color:#656565;position:absolute; 
+    left:0px; 
+    top:0px; 
+    width:100%;
+    display:block; 
+    text-align:left; 
+    text-indent:10px; 
+    z-index:9; 
+    border:0 none; 
+    font-size:14px;
+}
+              
+.yzm{
+    width: 97px;
+    height: 45px;
+    text-align: center;
+    line-height: 45px;
+    background: #f5f5f5;
+    color: #b52024;
+    border: solid 1px #cbcbcb;
+    display: block;
+    float: left;
+    margin: 0 0 0 10px;
+    font-weight: bolder;
+}
+
+.image-box{
+    width: 465px;
+    height: 500px;
+    float: left;
+    margin: 40px 0 0 130px;
+}
+
+.submit{
+    display:inline-block;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    border: 0;
+    cursor: pointer;
+    clear: both;
+    font-size: 16px;
+    font-weight: bolder;
+    background: #9A9A9A;
+    color: #FFFFFF;
+    margin-top:20px;
+}

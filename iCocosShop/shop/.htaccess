@@ -1,0 +1,4 @@
+RewriteEngine on
+
+
+RewriteRule  ^HOME.html   ./Home/index.php

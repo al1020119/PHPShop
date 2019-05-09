@@ -1,0 +1,36 @@
+<?php include './Public/header.html';
+//var_dump($arr);
+include './Public/nav.html';
+?>
+    
+    
+    <div class="row-fluid" id="main">
+        <div class="span8 offset2"> 
+            <form action="index.php?c=Type&a=doEdit" method="post" class="form-horizontal ">
+                <h3>修改商品分类</h3>
+                <input type="hidden" name="id" value="<?=$arr['id']?>">
+                <div class="control-group">
+                    <label class="control-label" for="name">分类名</label>
+                    <div class="controls">
+                        <input type="text" name="name" id="name" value="<?=$arr['name']?>">
+                    </div>
+                </div>
+                
+
+                
+
+                <div class="control-group">
+                    <div class="controls">
+                        <label class="checkbox">
+                            &nbsp;
+                        </label>
+                        <button class="btn btn-large btn-primary form-submit" type="submit">&nbsp;&nbsp;提交&nbsp;&nbsp;</button>
+                        <a class="btn btn-large default form-submit" href="index.php?c=Type">&nbsp;&nbsp;返回&nbsp;&nbsp;</a>
+                    </div>
+                </div>
+            </form>         
+        </div>
+    </div>
+    
+<?php include './Public/footer.html';?>
+    

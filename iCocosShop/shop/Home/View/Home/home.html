@@ -1,0 +1,163 @@
+
+            <!-- 头部开始 -->
+            <!-- nav开始 -->
+<?php
+include './Public/header.html';
+include './Public/nav.html';
+//var_dump(md5('123'));
+?> 
+            <!-- 搜索结束 -->
+            <!-- nav结束 -->
+
+            </div>
+               <!-- 头部结束 -->
+               <!-- 主体开始 -->
+            <div class="main">
+                <div id="banner">
+                <a href="javascript:void(0);" class="jt" id="prev"></a>
+                <a href="javascript:void(0);" class="jt" id="next"></a>
+            <div id="icon">
+            <br>
+            <br>
+            <?php  //var_dump($arr);
+                $num=0;
+                if(!empty($arr)):
+                foreach($arr as $v):
+                    $num += 1;
+                    ?>
+                
+                <a href="javascript:void(0);"><?=$num?></a>
+            <?php endforeach;
+            endif;?>
+                
+                
+                
+            </div>
+            <ul id="one">
+                
+                <?php  //var_dump($arr);
+                if(!empty($arr)):
+                foreach($arr as $v):?>
+                
+                <li><a href="<?=$v['link']?>"><img src="../Upload/<?=$v['pic']?>"></a></li>
+            <?php endforeach;?>
+            </ul>
+            </div>
+                <a href=""><img src="./Public/image/2.jpg" class="czyh" ></a>
+                <!-- 爆款区开始 -->
+                <img src="./Public/image/3.jpg">
+                 <div class="sell">
+                    <?php //var_dump($info); 
+                    foreach($info as $v):?>
+                        <a href="index.php?c=Goods&a=detail&id=<?=$v['id']?>"> <img src="../Upload/<?=$v['pic']?>" width="280" height="537"></a>
+                    <?php endforeach;endif;?>
+                </div>
+                
+                <!-- 五折区结束 -->
+
+                <!-- 爆款区开始 -->
+                <img src="./Public/image/3.jpg">
+                 <div class="sell">
+                    <?php //var_dump($info); 
+                    foreach($info as $v):?>
+                        <a href="<?=$v['id']?>.html"> <img src="../Upload/<?=$v['pic']?>" width="280" height="537"></a>
+                    <?php endforeach;?>
+                </div>
+                <!-- 主体结束 -->
+            </div>
+                <!-- 页脚开始 -->
+
+<?php 
+include './Public/footer.html';
+?>
+            <!-- 页脚结束 -->
+            <div class="fixed">
+                <ul>
+                    <li><a href="" class="downapp"></a></li>
+                    <li><a href="" class="server"></a></li>
+                    <li><a href="" class="return-top"></a></li>
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>
+
+
+<script>
+   var icon = document.getElementById('icon');
+   var one = document.getElementById('one');
+
+   var icona = icon.getElementsByTagName("a");
+   var oneli = one.getElementsByTagName("li");
+
+   var timer = setInterval(fun, 1000);
+
+   var a = 0;
+
+   var num = 0;
+
+   var prev = document.getElementById('prev');
+
+    var next = document.getElementById('next');
+
+//循环添加鼠标事件
+        for(var i=0;i<icona.length;i++){ 
+
+            icona[i].onmouseover = function(){ 
+                num = this.innerHTML -1;
+                // console.log(num);
+                //清空定时器
+                clearInterval(timer);
+
+                /*功能区切换颜色*/
+
+                //1.初始化功能区颜色
+                for(var j=0;j<icona.length;j++){ 
+                    icona[j].style.backgroundColor = 'orange';
+                }
+
+                this.style.backgroundColor = '#f00';
+
+                //2.遍历轮播图
+                for(var k=0;k<oneli.length;k++){ 
+
+                    //判断
+                    k == num ? oneli[num].style.display = 'block' : oneli[k].style.display = 'none';
+
+                }
+
+
+            }
+
+            icona[i].onmouseout = function(){ 
+                a = num;
+                timer = null;
+                timer = setInterval(fun,1000);
+            }
+        }
+
+
+
+
+  
+   function fun () {
+        for(var j=0;j<oneli.length;j++){
+            if(j == a){
+                oneli[a].style.display = 'block'
+            } else {
+                oneli[j].style.display = 'none'
+
+            }
+        }
+
+        for(var i=0; i < icona.length; i++){
+            icona[i].style.backgroundColor = 'orange';
+        }
+            
+            icona[a].style.backgroundColor = 'red';
+            a++;
+            if(a % icona.length == 0){
+                a = 0;
+            }
+   }
+</script>

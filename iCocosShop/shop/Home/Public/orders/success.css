@@ -1,0 +1,402 @@
+@charset "utf-8";
+#header
+{
+    padding: 0;
+	border: 0 none;
+}
+#location {
+	display: none;
+}
+.pay-now {
+ background: url(/images/btn-now-pay.gif) no-repeat;
+ float:left;
+ display:inline;
+ margin:0 10px 0 200px;
+}
+.emphasize:visited,.emphasize:link,.emphasize:hover,.emphasize {
+    color: #a10000;
+}
+.order,.shaidan,.tip {	
+    margin-top: 10px;
+}
+.order,.tip 
+{
+    border: 1px solid #DCDFE5;
+    padding: 10px;
+}
+.tip {
+    border-left: 0 none;
+    border-right: 0 none;
+    line-height: 18px;
+}
+.order table {
+    border-collapse: collapse;	
+}
+.order caption{
+    color:#a10000;
+    padding: 20px 0 10px;
+    font-size: 25px;
+    font-weight: bold;
+}
+.order .caption{
+    color:#a10000;padding-left:130px; font-size: 25px;font-weight: bold;text-align:center;width:100%;display:inline;
+}
+
+.order th, .order td {
+    line-height: 24px;
+    height: 24px;
+    border: 1px solid #d8d8d8;
+    text-align: center;
+}
+.order th {
+    background: #D8D8D8;
+    font-weight: normal;
+    border-right: 1px solid #fff;
+}
+.order th.delivery-time {
+    border-right: 0 none;
+}
+.pay-detail {
+    margin:5px 0 20px;
+    border-bottom: 1px;
+    color: #666;
+    position:relative;
+    z-index:1;
+}
+.pay-postal-info {
+    line-height: 22px;
+}
+.pay-postal-info em {
+	font-weight: bold;
+}
+.success-tip {
+    margin: 0 auto;
+    text-align: center;
+    line-height: 20px;
+}
+
+.pay-detail p span {
+    font-weight: normal;
+}
+.pay-now {
+    border: 0 none;   
+    display:inline-block;
+    cursor:pointer;	
+    width: 100px;
+    height: 28px;
+}
+.order-oprate {
+    text-align: right;
+    font-size: 10.5pt;
+    font-weight: bold;
+    border-top: 1px solid #E3E3E3;
+}
+.order-oprate a {	
+    line-height:50px;
+}
+.order-tip {
+    padding: 10px 15px;
+    border: 1px solid #CC9998;
+    background-color: #FFF6F7;
+}
+.msgboxhead a img {
+    margin-right: 5px;
+    margin-top: 6px;
+}
+.blank10 {
+    clear: both;
+    display: block;
+    font-size: 1px;
+    height: 10px;
+    overflow: hidden;
+}
+.paymentSelect{
+    padding-left:60px;
+}
+.zftitleBg{
+    height:40px; 
+    text-align:left; 
+    line-height:40px; 
+    text-indent:20px; 
+    background:url(/images/others/titBg.png) repeat-x left top; 
+    color:#444; 
+    font-size:14px; 
+    font-weight:bold;
+}
+a.whitef,a.whitef:visited{
+    color:#fff;
+}
+a.whitef:hover{
+    color:#fff;
+}
+.payment_PopupInfo input{
+    border:0;
+}
+.payment_reason{
+    margin-left:0px;
+}
+.zfsb_tipsinfo a:hover{
+    text-decoration:underline;
+}
+.zfsb_tipsinfo b{
+    font-weight: bold;
+}
+a.gray9,a.gray9:visited{
+    color:#999;
+}
+.pl35{
+    padding-left:35px;
+}
+.fredline{
+    color:#a10000; 
+    padding:0 15px;
+}
+.zfsb_tipsinfo li{
+    float:left; 
+    position:relative;
+}
+.zfsb_tipsinfo b{
+    float:left;
+}
+.daifu_tipsinfo{position:absolute; border:1px #a10000 solid; left:0; top:-48px; width:295px; background:#fff; padding:2px 10px; line-height:18px; color:#666;}
+.daifu_tipsico{position:absolute; left:65px; bottom:-9px;}
+.cc li{float:left; position:relative; line-height:28px; margin-right:15px; color:#666;}
+.msgboxhead_close{
+    float:right;
+}
+.msgboxhead_close img{
+    float:left;
+}
+.msgboxhead_close a,.msgboxhead_close a:visited{
+    color:#fff;
+}
+.reda10:link,.reda10:visited{
+    color:#a10000;
+}
+.whiteff:link,.whiteff:visited{
+    color:#fff;
+}
+
+.clearSuccess{
+    height:20px; 
+    font-size:0; 
+    line-height:0; 
+    display:block; 
+    clear:both;
+}
+#footer .blank15
+{
+display: none
+}
+
+.msgboxhead {
+    background: url("http://i.vanclimg.com/Others/2011/2/15/dpbox.gif") repeat-x scroll 0 0 transparent;
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: bold;
+    height: 23px;
+    line-height: 23px;
+    overflow: hidden;
+    padding: 0 5px;
+}
+.msgboxhead span {
+    display: inline;
+    float: left;
+}
+.msgboxhead a img {
+    display: block;
+    margin-right: 5px;
+    margin-top: 6px;
+}
+.blank10 {
+    clear: both;
+    display: block;
+    font-size: 1px;
+    height: 10px;
+    overflow: hidden;
+}
+
+.Online_payment{ width:515px;border:2px #9e0000 solid; background:#fff; position:absolute; left:180px; top:90px; box-shadow:0 5px 5px rgba(182, 182, 182, 1.0);display:none;z-index:20;}
+
+.paymentSelect{padding-left:60px;}
+
+
+a.whitef,a.whitef:visited{color:#fff;}
+a.whitef:hover{color:#fff;}
+.payment_PopupInfo input{border:0;}
+
+.whiteff:link,.whiteff:visited{color:#fff;}
+
+a.reda10:hover{text-decoration:underline;}
+a.gray9,a.gray9:visited{color:#999;}
+.pl35{padding-left:35px;}
+.fredline{color:#a10000; padding:0 15px;}
+
+.msgboxhead_close{float:right;}
+.msgboxhead_close img{float:left;}
+
+.paySelect_title{font-size:14px;padding-left:7px;}
+.RedftB{color:#a10000; font-size:16px; font-weight:bold;}
+.clear{clear:both; height:0; font-size:0; line-height:0; overflow:visible; display:block;}
+
+a.reda100:link,a.reda100:visited{color:#a10000;}
+
+#payBox{ width:958px; border:1px #dcdfe5 solid; padding:25px 10px;}
+#payBox .title{font-size:24px; text-align:center; color:#a10000;}
+.paySelect-title{ font-size:14px; font-weight:normal;}
+#paySelect-list{width:905px; background:#fafafa; padding:15px 0 15px 38px; margin:0 auto;}
+#paySelect-list li{ width:195px; float:left; height:75px; margin-right:30px; display:inline;}
+#paySelect-list input{ width:14px; height:14px; margin-right:7px; line-height:14px;}
+#paySelect-list img:hover{cursor:pointer;}
+#paySelect-list .tips{text-align:center; display:block; color:#a10000; padding-top:5px; font-family:"宋体";}
+.daifu_fontlink{float:right; display:block; margin-right:39px; margin-top:24px;}
+.payEdit_gobuy{text-align:right;}
+.payEdit_gobuy a,.payEdit_gobuy a:visited{font-size:14px; padding-right:27px; color:#a10000; font-weight:bold;}
+.payEdit_gobuy a:hover{text-decoration:underline;}
+.payTips_font{ padding: 10px 45px 10px 80px; border:1px #cc9998 solid; background:#fff6f7 url(../images/tips_bg.jpg) no-repeat 30px center;  line-height:18px;}
+
+.otherBuyprod{height:240px; border:1px #e2e2e2 solid; padding-top:15px;}
+.otherBuyprod img{display:block; margin-bottom:7px;}
+.otherBuyprod li{ width:150px; float:left; margin-left:38px; line-height:18px; font-size:12px; font-family:"宋体"; display:inline;}
+.Rsallprice{color:#a10000; padding-left:3px;}
+
+.bank-img{width:168px;height:44px;}
+
+.zftitleBg{height:20px; line-height:20px; text-indent:20px; color:#444; font-size:12px; margin-top:10px;}
+.pay_success{width:107px; display:block; float:left; margin-right:10px;}
+.zfsb_tipsinfo li{float:left; position:relative; line-height:28px; margin-right:15px; color:#666;}
+.payment_PopupInfon{color:#333; padding:5px 0 5px 75px;}
+.blank30,.blank20,.blank5,.blank50{clear:both; display:block; font-size:1px; height:30px; overflow:hidden;}
+.blank20{height:20px;}
+.blank5{height:5px;}
+.blank50{height:50px;}
+.payment_reatips{width:270px; line-height:18px; margin:10px 0 5px 0; color:#666;}
+.payment_reason{margin-left:118px;}
+.pl{padding-left:118px;}
+
+.reda10:link,.reda10:visited{color:#a10000; text-decoration:underline;}
+.reda10noneu:link,.reda10noneu:visited{color:#a10000;}
+.payment_reatips1 {width:370px; line-height:18px; margin:10px 0; color:#666;}
+.payment_reason1 {margin-left:118px;}
+.payment_inputtext{ width:270px; height:40px; border:1px #ccc solid; padding:5px; color:#999;}
+
+
+.zftitleBg{height:20px; line-height:20px; text-indent:20px; color:#444; font-size:12px; margin-top:10px;}
+.paymentbtnn{width:75px; height:22px; background:url(/images/btn.png) no-repeat; color:#fff; border:0; cursor:pointer;}
+.paymenttipsn {
+    background: url("http://i5.vanclimg.com/om/zf_dc.png") no-repeat scroll 300px center transparent;
+    border-top: 1px solid #CCCCCC;
+    color: #999999;
+    line-height: 31px;
+    margin: 0 20px;
+    text-align: right;
+    text-indent: 20px;
+}
+
+.PayPopup_bar{ width:628px; border:2px #9e0000 solid; background:#fff; position:absolute; left:160px; top:90px; box-shadow:0 5px 5px rgba(182, 182, 182, 1.0);display:none;z-index:20;}
+.PayPopup_title{height:23px; line-height:20px;  background:url(/images/popup_titlebg.jpg) repeat-x left top; padding:0 10px; color:#fff;}
+.click_clouse{float:right; display:inline-block;}
+.clouse_ico{ width:11px; height:11px; background:url(/images/clouse_ico.jpg) no-repeat 0 0; display:block; margin:4px 4px 0 0; float:left; }
+.PayPopup_info01{padding:20px 10px;}
+#PayPopup_info02{padding:0 10px 35px 10px;}
+#PayPopup_info02 input{ height:auto;}
+#PayPopup_info02 .daifuLinks_input{width:504px; height:23px; line-height:23px; border:1px #b3b2b2 solid; color:#888; border-bottom:1px #e2e2e2 solid; border-right:1px #e2e2e2 solid; text-indent:7px; background:#fafafa;}
+#PayPopup_info02 .inputBtn{ width:77px; height:26px; line-height:26px; background:url(/images/popup_btn.jpg) no-repeat left top; text-align:center; border:0; color:#333; cursor:pointer;}
+a.whitef:link,a.whitef:visited{color:#fff;}
+
+.carMessAlr0130{ width:928px; margin:0 auto; text-align:center; height:20px; line-height:20px; font-weight:bold;}
+.carMessAlr0130 a{ color:#a10000; padding-left:24px;}
+
+.Infoblock{display:block; padding-left:0;}
+.gray999{color:#999;}
+
+.Payingbank{ margin-left:180px;line-height:36px;}
+.Payingbank img{margin:0 25px 0 0;}
+.Bftred14{color:#a10000; font-size:14px; font-weight:bold;}
+.fbla014{color:#000; font-size:14px;}
+.PayoptionsTit{ color:#333; font-weight:bold; line-height:32px;}
+
+/* 提示框 建议留言 css */
+.orderChangeTsk0117{ width:305px; height:114px; border:1px solid #a10000;}
+.orderChangeTsk0117 h3{ width:305px; height:23px; line-height:23px; color:#fff; background:url(../images/ordertwoxg/tsbg0117.jpg) repeat-x scroll left top;}
+.orderChangeTsk0117 h3 span{ float:left; margin-left:3px;}
+.orderChangeTsk0117 h3 a:link,.orderChangeTsk0117 h3 a:visited{ float:right; margin-right:6px; color:#fff;}
+.orderChangeTsk0117 h3 a img{ float:left; display:inline; margin-top:6px;}
+.orderChangeTsk0117 .Word0117{ font-size:12px; color:#333333; text-align:center; margin:20px auto;}
+.orderChangeTsk0117 .queding0117{ width:56px; height:19px; margin:0px 0px 0px 125px; border:none; background:url(../images/ordertwoxg/queding0117.jpg) no-repeat scroll; cursor:pointer;}
+
+
+/* 建议留言 addcss */
+.orderChangeJyly0117{ width:348px; height:196px;}
+.orderChangeJyly0117 h3{ width:348px;}
+.orderChangeJyly0117 h3 span{ font-weight:bold;}
+.orderChangeJyly0117 h4{ text-align:center; margin-top:45px; font-weight:bold;}
+.orderChangeJyly0117 .queding0117{ margin-left:138px;}
+
+
+/* 建议留言满意or不满意  css */
+.orderChangeTsk0117 .manyior0117{ width:280px; height:32px; margin-top:5px; margin-left:15px; line-height:32px; color:#333333;}
+.orderChangeTsk0117 .manyior0117 strong{ float:left;}
+.orderChangeTsk0117 .manyior0117 span{ float:left; width:65px; height:32px; }
+.orderChangeTsk0117 .manyior0117 span input{ float:left; margin:9px 5px 0px 0px; *margin:5px 5px 0px 0px;}
+.orderChangeTsk0117 .liuyanbox0117{ width:304px; height:66px; padding:5px; margin-left:15px; border:1px solid #aaadb2; font-size:12px; color:#9a9a9a;}
+.orderChangeTsk0117 .tianWord0117{ float:right; margin-right:25px; line-height:30px;}
+.orderChangeTsk0117 .tianWord0117 span{ color:#a10000;}
+
+
+/*  修改款式颜色  css */
+.colorChange0117{ width:338px; height:auto; padding-top:10px; overflow:hidden; zoom:1; position:relative;}
+.colorGuanBi0117{ left:273px; top:1px; position:absolute;}
+.ColorChangeBox0117{ width:336px; height:auto; padding-bottom:10px; border:1px solid #a10000; overflow:hidden;}
+.ColorChangeBox0117 h3{ width:336px; height:31px; background:#fff1f1; line-height:31px;}
+.ColorChangeBox0117 h3 span{ float:left; margin-left:10px; color:#000100; font-weight:bold;}
+.ColorChangeBox0117 h3 a{ float:right; margin-right:10px; margin-top:10px;}
+.ColorimgTab{ width:320px; height:auto; margin-left:10px;}
+.ColorimgTab h4{ width:70px; float:left; margin-right:5px; line-height:35px; text-align:right; color:#a10000;}
+.ColorimgTab div{ width:245px; float:left;}
+.ColorimgTab div a{ display:block; width:30px; height:30px; line-height:30px; float:left; border:1px solid #b8b9bb; margin-right:5px; margin-top:10px; text-align:center;}
+.ColorimgTab div a:hover{ border:1px solid #a10000;}
+.ColorimgTab span{ display:block; float:left; margin-top:10px;}
+.ColorimgTab span .colortext0117{ width:16px; height:13px; padding:2px 3px; float:left; margin:0px 6px; border:none; background:url(../images/ordertwoxg/colortext0117.jpg) no-repeat scroll 0px 0px;}
+.ColorimgTab span a{ float:left; margin-top:3px;}
+.ColorimgTab0117 span{ margin-left:10px; margin-top:0px;}
+.colorChange0117 .queding0117{ width:56px; height:19px; margin:10px 0px 0px 125px; border:none; background:url(../images/ordertwoxg/queding0117.jpg) no-repeat scroll; cursor:pointer;}
+.changeCol0130{ background:url(../images/btn013001.jpg) no-repeat; width:97px; height:27px; line-height:21px; text-align:center; display:inline-block;vertical-align:middle;}
+
+
+/*1026 默认支付*/
+.payTypeBank1026title{ font-size:30px; font-family:Arial, Helvetica, sans-serif; font-weight:normal;}
+.order1026{ padding-bottom:0px;}
+.paySelect1026Title{ padding-left:7px; height:24px;}
+.Red1026ftB{color:#a10000; font-size:12px; font-weight:bold; float:left; height:24px; line-height:22px;}
+.paySelect1026Tip{ float:left; height:22px; line-height:22px; margin-left:4px; _position:relative; _margin-left:15px; display:inline;}
+.paySelect1026Tip em{ background:url(../images/ordertwoxg/zhifu.png) no-repeat left top; display:block; width:6px; height:9px; float:left; overflow:hidden; margin:6px -1px 0px 0px; position:relative;}
+.paySelect1026Tip span{ display:block; height:22px; line-height:22px; border:1px solid #cc9998; background:#fff6f7; padding:0px 9px; color:#333; float:left; font-weight:normal;}
+.paySelect1026Tip .Red1026B{color:#a10000; font-size:12px; font-weight:bold;}
+
+.paySelectMenubarBox{ width:948px; background:url(../images/ordertwoxg/zhifu.png) repeat-x 0px -79px; height:31px; line-height:31px; margin:0 auto;margin-top:7px; }
+.paySelectMenubar{ margin-left:45px;}
+.paySelectMenubar li{ float:left; width:110px; height:31px; background:url(../images/ordertwoxg/zhifu.png) no-repeat 0px -13px; cursor:pointer; text-align:center; line-height:31px; color:#333;margin:0px 17px 0px 0px; display:inline;}
+.paySelectMenubar li.hover{ background-position:0px -46px; font-weight:bold;}
+
+#paySelect-list{ width:903px; padding-left:45px;}
+.daifu1026Fontlink{float:left; display:block; margin-right:39px; margin-top:24px;}
+.daifu1026Buy{ float:right; margin-right:34px; display:inline;}
+.payTypeBank_tab .querenPayMoney .daifu1026Buy h3{ float:left; height:24px; line-height:24px; font-weight:normal; margin-top:21px;}
+
+.payTypeBank_box{ overflow:hidden;}
+.payTypeBank_tab .querenPayMoney .daifu1026Link{ float:left; display:block;}
+.payTypeBank_tab a.daifu1026Btn01{ float:none; margin-right:0px;}
+.daifu1026Money{ color:#a10000; font-size:30px; font-family:Arial, Helvetica, sans-serif; display:inline-block; vertical-align:middle; padding-right:20px;}
+
+.payTypeBankTabPred{ color:#a10000; line-height:21px; padding-left:26px;}
+
+.buyCheck1026Rtips05{background:#FFF6F7;border:1px solid #CC9998;color:#a10000; margin:13px 6px 0px 0px; padding:0px 10px 0px 5px; height:18px; line-height:18px; display:inline-block; float:left;}
+.buyCheck1026Rtips05ico{background:url("../images/buy_spritebg.gif") no-repeat 5px -136px;line-height:18px; text-indent:30px;}
+
+
+.payTypeBank_tab{ width:903px; padding-left:45px;}
+.payTypeBank_tab ul li{ width:195px;}
+.payTypeBank_tab ul li input{ margin-right:7px;}
+
+.buyCheck1026Rh3{ float:left; height:24px; line-height:24px; margin-top:14px; color:#333;}

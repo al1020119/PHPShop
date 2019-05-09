@@ -1,0 +1,71 @@
+<?php include './Public/header.html';
+include './Public/nav.html';
+?>
+    
+    
+    <div class="row-fluid" id="main">
+        <div class="span8 offset2"> 
+            <form action="index.php?c=User&a=doAdd" method="post" class="form-horizontal ">
+                <h3>个人基本信息</h3>
+                <div class="control-group">
+                    <label class="control-label" for="username">姓名</label>
+                    <div class="controls">
+                        <input type="text" name="username" id="username" placeholder="用户名"required>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="pwd">密码</label>
+                    <div class="controls">
+                        <input type="password" id="pwd" name="pwd" placeholder="密码">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="pwd2">确认密码</label>
+                    <div class="controls">
+                        <input type="password" id="pwd2" name="pwd2" placeholder="确认密码">
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label" for="pwd2">性别</label>
+                    <div class="controls">
+                        <label class="radio inline">
+                          <input name="sex" type="radio" id="inlineCheckbox1" value="1"> 男
+                        </label>
+                        <label class="radio inline">
+                          <input name="sex" type="radio" id="inlineCheckbox2" value="0"> 女
+                        </label>
+                        <label class="radio inline">
+                          <input name="sex" type="radio" id="inlineCheckbox3" value="2"> 妖
+                        </label>
+                        <label class="radio inline">
+                          <input name="sex" type="radio" id="inlineCheckbox3" checked value="3"> gay
+                        </label>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label" for="inputEmail">角色</label>
+                    <div class="controls">
+                        <select name="role">
+                            <option value="1">普通会员</option>
+                            <option value="2">管理员</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <div class="controls">
+                        <label class="checkbox">
+                            &nbsp;
+                        </label>
+                        <button class="btn btn-large btn-primary form-submit" type="submit">&nbsp;&nbsp;提交&nbsp;&nbsp;</button>
+                        <a class="btn btn-large default form-submit" href="index.php?c=Type">&nbsp;&nbsp;返回&nbsp;&nbsp;</a>
+                    </div>
+                </div>
+            </form>         
+        </div>
+    </div>
+    
+<?php include './Public/footer.html';?>
+    

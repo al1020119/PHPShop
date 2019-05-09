@@ -1,0 +1,84 @@
+<div class="row-fluid" id="nav">    
+        <div class="span8 offset2">
+            <ul class="nav nav-pills">
+                <li class="active">
+                    <a href="index.php">首页</a>
+                </li>
+                <li class="active">
+                    <a href="../Home/index.php" target="_blank">商城首页</a>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#"  class="dropdown-toggle" data-toggle="dropdown" href="#">商品管理<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="index.php?c=Goods&a=index">商品列表</a></li>
+                        <li><a href="index.php?c=Goods&a=add">添加商品</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#"  class="dropdown-toggle" data-toggle="dropdown" href="#">订单管理<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="index.php?c=Orders&a=index">订单列表</a></li>
+                        
+                    </ul>
+                </li>
+                <?php if($_SESSION['username']['id']=='59'):?>
+                <li class="dropdown">
+                    <a href="#"  class="dropdown-toggle" data-toggle="dropdown" href="#">用户管理<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="index.php?c=User&a=index">用户列表</a></li>
+                        <li><a href="index.php?c=User&a=add">添加用户</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#"  class="dropdown-toggle" data-toggle="dropdown" href="#">分类管理<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="index.php?c=Type&a=add">添加分类</a></li>
+                        <li><a href="index.php?c=Type&a=index">分类列表</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#"  class="dropdown-toggle" data-toggle="dropdown" href="#">轮播图管理<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="index.php?c=Guanggao&a=index">轮播图列表</a></li>
+                        <li><a href="index.php?c=Guanggao&a=add">添加轮播图</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#"  class="dropdown-toggle" data-toggle="dropdown" href="#">头部广告<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="index.php?c=Guanggao&a=home">广告列表</a></li>
+                        
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#"  class="dropdown-toggle" data-toggle="dropdown" href="#">友情链接<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="index.php?c=Friend&a=index">友情列表</a></li>
+                        <li><a href="index.php?c=Friend&a=add">添加友情</a></li>
+                    </ul>
+                </li>
+
+                <?php endif?>
+
+                
+
+                
+
+                
+                
+                <li class="dropdown">
+                    <a href="#"  class="dropdown-toggle" data-toggle="dropdown" href="#"><?=$_SESSION['username']['username']?><b class="caret"></b></a>
+                
+                    <ul class="dropdown-menu">
+                        <li><a href="#">个人中心</a></li>
+                        <li><a href="index.php?c=Login&a=logout">注销</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>

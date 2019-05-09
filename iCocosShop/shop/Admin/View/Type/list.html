@@ -1,0 +1,57 @@
+<?php 
+include'./Public/header.html';
+//var_dump($_SESSION);
+
+include'./Public/nav.html';
+
+?>
+
+	
+
+
+<div class="row-fluid" id="main">
+	<div class="span8 offset2">		
+	    
+
+		<table class="table table-striped" >
+			<thead>
+			<tr>
+				<th>ID</th>
+				<th>分类名</th>
+				<th>pid</th>
+				<th>path路径</th>
+				<th>操作</th>
+			</tr>
+			</thead>
+			<tbody>
+				
+				
+				
+				<?php 
+				if(empty($arr)){
+					echo '<tr><td colspan="5" >暂无数据</td></tr>';
+				}else {
+					foreach($arr as $k=>$v):
+						$num = substr_count($v['path'],',');
+						$str = '';
+						for($i = 1;$i < $num;$i++){
+							$str .="　　";
+						}
+				?>
+					<tr>
+						<td><?=$v['id']?></td>
+						<td><?=$str.'|----'.$v['name']?></td>
+						<td><?=$v['pid']?></td>
+						<td><?=$v['path']?></td>
+						<td>
+							<a class="btn btn-danger" href="index.php?c=Type&a=del&id=<?=$v['id']?>" onClick="return confirm('确定删除?');">删除</a>┃<a href="index.php?c=Type&a=edit&id=<?=$v['id']?>" class="btn">修改</a>┃<a href="index.php?c=Type&a=add&id=<?=$v['id']?>" class="btn">添加子类</a>
+							
+						</td>
+					</tr>
+				<?php endforeach;}?>
+			</tbody>
+		</table>
+		
+	</div>
+</div>
+<?php include './Public/footer.html';?>

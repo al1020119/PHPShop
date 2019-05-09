@@ -1,0 +1,160 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>购物流程：TS欧美时尚女装、流行女装商城、连衣裙、全球时尚同步 - Three Seasons官方网站</title>
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<meta property="qc:admins" content="20113164076764143636">
+<link rel="shortcut icon" href="http://www.onlyts.cn/images/favicon.ico">
+
+<link href="./Public/addOrders/customer.css" type="text/css" rel="stylesheet"><link href="./Public/addOrders/main.css" type="text/css" rel="stylesheet"><link href="./Public/addOrders/slide.css" type="text/css" rel="stylesheet">
+
+<!--[if IE 6]>
+<script type="text/javascript" src="http://img1.onlyts.cn/js/DD_belatedPNG_0.0.8a-min.js?version=V3780.js"></script><![endif]-->
+
+<script language="JavaScript">
+    var miniHeader = true;
+    
+    <!-- Hide
+    function killErrors() {
+        return true;
+    }
+    window.onerror = killErrors;
+    // -->
+</script>
+<script type="text/javascript">
+var _bdhm_top = 0;
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+var _bdhm_tim = new Image(1,1);
+_bdhm_tim.id = "bdhmPerimg";
+_bdhm_tim.src = _bdhmProtocol + "hm.baidu.com/_tt.gif?si=609ce6669ca441ca061d684ca80aa054&rnd=" + Math.round(Math.random()*2147483647);
+_bdhm_tim.onload=function(){_bdhm_top = 1;}
+</script></head>
+<body>
+
+<?php include './Public/header.html';?>
+<div id="container">
+<form action="index.php?c=Orders&a=doAdd" method="post">
+<div id="main" class="cf">
+    <div id="shopping_checkout_headline"></div>
+    <div class="shopping_checkout_title" style="background:#A10000">
+        <a href="index.php?c=Goods&a=shopcar" title="修改…">修改…</a>
+        商品列表
+    </div>
+    <table class="shopping_checkout_table" cellpadding="0" cellspacing="0">
+        <tr>
+            <th width="41%">商品名称</th>
+            <th width="20%">属性</th>
+            <th width="10%">单价</th>
+            <th class="center" width="17%">购买数量</th>
+            <th width="12%">小计</th>
+        </tr>
+
+<?php 
+$allPrice = 0;
+foreach ($_SESSION['shopcar'] as $k=>$v) :
+    if($v['num']!==0){
+    $allPrice += $v['num']*$v['price'];
+?>
+        <tr>
+            <td>
+                <a href="<?=$v['id']?>.html" target="_blank" title="<?=$v['name']?>"><?=$v['name']?></a>
+            </td>
+            <td>
+                颜色:白色 <br>
+                尺码:M <br>
+            </td>
+            <td>￥<?=$v['price']?></td>
+            <td align="center"><?=$v['num']?></td>
+            <td>￥<?=number_format($v['price']*$v['num'], 2)?></td>
+        </tr>
+<?php 
+}else{
+    unset($_SESSION['shopcar'][$k]);
+}
+endforeach;?>                      
+        <tr>
+            <td colspan="6" align="right">
+                配送费用：<span class="price shipping_fee">￥0</span>购物金额小计：<span class="price">￥<?=number_format($allPrice, 2)?></span>
+            </td>
+        </tr>
+    </table>
+    
+    <div class="shopping_checkout_title" style="background:#A10000">
+        <a href="http://www.onlyts.cn/flow.php?step=consignee" title="修改…">修改…</a>
+        收货人信息
+    </div>
+    
+    <table class="shopping_checkout_table" cellpadding="0" cellspacing="0">
+        <tr>
+            <td align="right" width="10%">收货人姓名：</td>
+            <td width="40%"><input name="getman" class="inputBg" id="consignee_0" type="text" required> (必填)</td>
+
+            <td align="right">手机：</td>
+            <td><input name="phone" class="inputBg" id="mobile_0" type="text" required> (必填)</td>
+        </tr> 
+        <tr>
+            <td align="right">详细地址：</td>
+            <td>
+                <?php  
+                if(!empty($arr)){
+                foreach($arr as $v):?>
+                <label>
+                    <input <?php if($v['status']==1) echo'checked';?> name="address" type="radio" id="inlineCheckbox1" value="<?=$v['address']?>"><?php if($v['status']==1) echo'(默认地址)';?><?=$v['address']?>
+                </label><br>
+            <?php endforeach;}else{?>
+                    <input name="address" class="inputBg" id="address_0" type="text" required> (未设置地址，请手动填写)或者点击<a href="index.php?c=User&a=address&id=<?=$_SESSION['username']['id']?>">+添加地址</a>
+            <?php }?>
+            </td>
+            <td align="right">邮政编码：</td>
+            <td><input name="code" class="inputBg" id="zipcode_0" type="text"></td>
+        </tr>
+        
+    </table>
+        
+    <div class="blank"></div>
+    
+    <div class="shopping_checkout_title" style="background:#A10000">其它信息</div>
+    <table class="shopping_checkout_table" cellpadding="0" cellspacing="0">
+        <tr>
+            <td valign="top"><strong>订单附言:</strong></td>
+            <td>
+                <textarea name="message" cols="80" rows="3" id="postscript" class="element_border"></textarea>
+                <div id="postscript_max_input_num">订单附言最多只能输入255英文字符或120个汉字</div>
+            </td>
+        </tr>
+    </table>
+
+    <div class="shopping_checkout_title" style="background:#A10000">费用总计</div>
+    <div id="ECS_ORDERTOTAL">
+        <table class="shopping_checkout_table" cellpadding="0" cellspacing="0">
+            <tr>
+                <td align="right">
+                  商品总价: <span class="price">￥<?=number_format($allPrice, 2)?></span>
+                </td>
+            </tr>
+            <tr>
+                <td align="right"> 
+                    应付款金额: <span class="price">￥<?=number_format($allPrice, 2)?></span>
+                </td>
+            </tr>
+        </table>
+    </div>      
+    <button><p class="time">立即结算</p></button>
+</div>
+
+</form>
+</div>
+
+
+
+
+<div id="footer" class="simple">
+    <div id="footer_copy">
+    “TS” AND “Three Seasons” ARE REGISTERED TRADEMARKS BELONG TO LIGHTINTHEBOX, INC.<br>
+    © 2009-2011 - ONLYTS ALL RIGHTS RESERVED. <a href="http://www.miibeian.gov.cn/" target="_blank" rel="nofollow">沪ICP备10211500号</a>
+    </div>
+</div>
+<div style="position: fixed; bottom: 128px; opacity: 0; cursor: pointer;" id="tag_gotop"></div>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+    <head>
+        <title>凡客诚品 - 会员注册</title>
+        <meta charset="utf-8">
+        <link rel="icon" href="./Public/image/faviconlogin.ico">
+        <meta name="keywords" content="凡客诚品 - 会员注册,">
+        <meta name="description" content="凡客诚品 - 会员注册">  
+        <link rel="stylesheet" href="./Public/css/login.css">
+    </head>
+    <body>
+        <div class="contianer">
+            <div class="header">
+                <a href="index.php?c=Home&a=index" class="logo left"></a>
+                <p class="right"><a href="">帮助</a></p>
+            </div>
+            <div class="main">
+                <div style="overflow:hidden;">
+                    <h3 class="regist right">
+                        凡客 Vancl 注册 
+                        
+                        <span class="tishi right">
+                            已有账户立即<a href="index.php?c=Login&a=index" class="regise-a">登录</a>
+                        </span>
+                    </h3>
+                </div>
+                <div class="main-login">
+                    <div class="advert left">
+                        <img src="./Public/image/newlogo.jpg">
+                    </div>
+                    <div class="logoin right">
+                        <ul>    
+                            <li>注册账户</li>
+                            
+                        </ul>
+                        <div class="shows">
+                            <div>
+                                <form action="index.php?c=User&a=doAdd" method="post">
+                                    <input type="" class="username" name="username" placeholder="请输入用户名"><br>
+                                    <input type="password" class="pwd" name="pwd" placeholder="请输入密码"><br>
+                                    <input type="password" class="pwd" name="pwd2" placeholder="请输入密码"><br>
+                                    <br>
+                                    <b>验证码：</b>
+            
+                <input id="signup_valicode" name="yzm"  type="text" style="width:70px;height:26px;position:relative;top:-5px">
+                <img class="img_style" src="./Public/yzm.php" title="看不清？点击更换另一个验证码。" onclick="this.src='./Public/yzm.php?'+Math.random()" style="position:relative;top:5px"><br>
+                <div id="signup_agreement_con">
+            <input id="signup_agree" name="yes" onclick="check('agree');" type="checkbox"><label for="signup_agree">已阅读并同意VANCL凡客诚品服务条款》</label>
+        </div>
+                                    <input type="submit" value="注册" class="denglu">
+                                </form>
+                                <div class="xian"></div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 主题结束 -->
+             <div class="footer">
+                <div class="foot-bottom">
+                    <div class="supfoot">
+                        <p> Copyright 2007 - 2016 vancl.com All Rights Reserved 京ICP证100557号 京公网安备11011502002400号 出版物经营许可证新出发京批字第直110138号</p>
+                    </div>
+                    <div class="subfoot">
+                        <a href="" class="list-1"></a>
+                        <a href="" class="list-2"></a>
+                        <a href="" class="list-3"></a>
+                        <a href="" class="list-4"></a>
+                        <a href="" class="list-5"></a>
+                        <a href=""><img src="./Public/image/cctv.png" width="120" height="49"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,5 @@
+RewriteEngine on
+
+
+RewriteRule  ^(\d+)\.html   ./index.php?c=Goods&a=detail&id=$1
+RewriteRule  ^T(\d+)\.html   ./index.php?c=Goods&a=index&tid=$1

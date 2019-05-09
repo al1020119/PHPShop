@@ -1,0 +1,368 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0061)http://my.vancl.com/Order/#ref=my-left-left-Order|head-denglu -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head id="Head1"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>我的资料</title>
+    <script src="./Public/detail/push.js.下载"></script><script type="text/javascript" src="./Public/detail/js.ashx"></script>
+    <link href="./Public/detail/css.ashx" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" href="http://i.vanclimg.com/common/favicon/favicon.ico" type="image/x-icon">
+    
+    
+
+    <link type="text/css" rel="stylesheet" href="./Public/detail/css(1).ashx">
+
+    <script type="text/javascript" src="./Public/detail/js(1).ashx"></script>
+
+
+    <script type="text/javascript" language="javascript">
+        var COOKIE_NAME_WEIXIN = "COOKIE_NAME_WEIXIN";
+        $(function () {
+            //'标记已看到菜单移位通知'的cookie名
+//            var COOKIE_NAME_NEWPLACENOTICE1 = "COOKIE_NAME_NEWPLACENOTICE1";
+//            var npn1 = getCookie(COOKIE_NAME_NEWPLACENOTICE1) != "viewed";
+
+//            $.each($("#side-nav").find("ul").children(), function () {
+//                if ($(this).find("a").text().indexOf("账户安全") > -1) {
+//                    $(this).css("position", "relative").prepend($("<p style='position:absolute; top:0; left:88px; width:30px; height:20px; background:url(//i.vanclimg.com/header/20120309/spritesbg.png) no-repeat -190px -137px;'></p>"));
+//                }
+//                if (npn1) {
+//                    if ($(this).find("a").text().indexOf("退换货") > -1) {
+//                        $(this).css("position", "relative").prepend($("<p id='newplacenotice1' style='cursor: pointer;position:absolute; top:1px; left:103px; width:82px; height:20px; background:url(//i.vanclimg.com/my/2012/boot/pjiabg.png) no-repeat -645px 0;  '></p>"));
+//                    }
+//                }
+//            });
+
+//            if (npn1) {
+//                $("#newplacenotice1").bind("click", function () {
+//                    setCookie(COOKIE_NAME_NEWPLACENOTICE1, "viewed", 365 * 100);
+//                    $(this).remove();
+//                });
+//            }
+
+            if (!getCookie(COOKIE_NAME_WEIXIN)) {
+                $("#WeixinBox").show();
+            }
+            $("img[original]").lazyload();
+        });
+        function closeWeixin() {
+            $("#WeixinBox").hide();
+            setCookie(COOKIE_NAME_WEIXIN, "closed");
+        }
+    </script>
+    <style type="text/css">
+        body
+        {
+            font-size: 12px !important;
+        }
+        .newitenforsafecenteonly
+        {
+            background: url("http://i.vanclimg.com/header/20120309/spritesbg.png") no-repeat scroll 0 0 transparent;
+            background-position: -190px -132px;
+            width: 100px;
+        }
+        #Head a:hover
+        {
+            text-decoration: none;
+        }
+    </style>
+    
+</head>
+<body id="body" class="cols_manage">
+    <?php 
+    include './Public/header.html';
+    ?>
+    <div class="wrapper">
+        <div style="height: 15px; clear: both; overflow: hidden">
+        </div>
+        <dl id="position">
+            <dt> 您当前的位置：<a href="index.php?c=Home&a=index">凡客首页</a></dt>
+            <dd> &gt; <a href="index.php?c=User&a=person"> 我的凡客 </a></dd>
+            
+        </dl>
+        <div id="welcome"> 
+        </div>
+
+<div id="side-nav">
+<div class="my_vancl">
+    <h2>
+        <a href="index.php?c=User&a=person" class="track" name="my-left-left-commorder">我的凡客</a></h2>
+</div>
+    
+    <ul class="service-rate">
+        <li>
+            <h3>
+                账户管理</h3>
+        </li>
+                        <li class=""><a href="index.php?c=User&a=person" class="track selected" name="my-left-left-personinfo" itemurl="http://my.vancl.com/User/UserInfo" url="http://my.vancl.com/Order/">
+                                ·我的资料</a></li>
+                        <li class=""><a href="index.php?c=User&a=safe&id=<?=$arr['id']?>" class="track" name="my-left-left-modifypassword" itemurl="http://my.vancl.com/SafeCenter" url="http://my.vancl.com/Order/">
+                ·账户安全</a></li>
+                        <li class=""><a href="index.php?c=User&a=address&id=<?=$arr['id']?>" class="track" name="my-left-left-modifyDeliveryInfo" itemurl="http://my.vancl.com/DeliveryAddress/Index" url="http://my.vancl.com/Order/">
+                ·收货地址</a></li>
+                        
+    </ul>
+
+    <ul class="">
+        <li>
+            <h3>
+                订单中心</h3>
+        </li>
+                            <li class=""><a href="index.php?c=Orders&a=detail" class="track" name="my-left-left-Order" itemurl="http://my.vancl.com/Order/" url="http://my.vancl.com/Order/">
+                ·我的订单</a></li>
+                        
+    </ul>
+    <ul class="">
+        <li>
+            <h3>
+                客户服务</h3>
+        </li>
+                        <li class=""><a href="" class="track" name="my-left-left-returnorder" itemurl="http://returns.vancl.com/" url="http://my.vancl.com/Order/">
+                ·退换货办理</a></li>
+                        <li class=""><a href="" class="track" name="my-left-left-productcomment" itemurl="http://my.vancl.com/comment/" url="http://my.vancl.com/Order/">
+                ·我要评价</a></li>
+                        <li class=""><a href="" class="track" name="my-left-left-productquestion" itemurl="http://my.vancl.com/question" url="http://my.vancl.com/Order/">
+                ·商品提问</a></li>
+    </ul>
+    
+</div>
+
+        
+ 
+<link type="text/css" rel="stylesheet" href="./Public/detail/css(2).ashx">
+
+<div class="ordercontainer">
+    <h3>
+    <span>我的资料</span>
+         <a href="http://catalog.vancl.com/zhuanti/tg_20100510.html" style="color: #a10000;
+            float: right; border: none; font-size: 12px; font-weight: normal; background: url(http://i4.vanclimg.com/cms/20151231/pic_my.jpg) no-repeat left center;
+            text-indent: 20px; margin: 0 5px 0 0;" target="_blank">谨防诈骗公告</a>
+    </h3>
+    <div>
+<div class="blank10"></div>    </div>
+    
+<div class="AsecurityBox01">
+    <div class="asProgress">
+        <em>账户安全：</em>
+        <div class="asProgSpeed">
+            <span class="asProgNow">弱</span><span class="">中</span><span class="">强</span>
+        </div>
+    </div>
+    <ul class="asProgUl" style="_margin-right:-12px;">
+        <li class="asProgPhone01"><a href="http://my.vancl.com/SafeCenter" title="手机未验证" class="track" name="my-order-safe-phone"><em></em>手机未验证</a></li>
+        <li class="asProgEmail01"><a href="http://my.vancl.com/SafeCenter" title="邮箱未验证" class="track" name="my-order-safe-email"><em></em>邮箱未验证</a></li>
+        <li class="asProgPassword01" style="display:none;"><a href="http://my.vancl.com/SafeCenter" title="未设置支付密码" class="track" name="my-order-safe-pay"><em></em>未设置支付密码</a></li>
+    </ul>
+    <div class="asProgAtarts" style="display:none;">为保障账户及资金安全,建议您开启全部<a href="http://my.vancl.com/SafeCenter" class="track" name="my-order-safecenter">安全设置</a></div>
+    <div class="blank0"></div>
+</div>
+
+    <!--<div class="blank10">
+    </div>
+    <div style="width: 778px; height: 56px; line-height: 28px; border: 1px #cc9998 solid;
+        float: left; background: #fff6f7;">
+        <span style="width: 28px; height: 18px; display: block; float: left; background: url(http://i1.vanclimg.com/returns/returns/sprite_bg.png) no-repeat 8px -49px;
+            margin-top: 5px;"></span>
+        <div style="width: 750px; float: left;">尊敬的客户，您在购买第三方品牌的商品后需要换货时，如发现此商品处于售罄状态，请先办理退货，然后用您的账号登陆<a href="http://www.vjia.com" target="_blank">www.vjia.com</a>，搜索到此商品后根据库存状况重新下单。</div>
+    </div>
+	-->
+    <div class="blank10">
+    </div>
+    <div class="wtitle">
+        <div id="cover">
+        </div>
+        
+</form>      
+    </div>
+    <div id="orderlist"><style type="text/css">
+.VerticalContainer{ display:table;*position: relative;}
+.VerticalSubContainer{  *position: absolute;*top: 50%;display: table-cell;vertical-align: middle;}
+.VerticalSubContainerDel{  *position: absolute;*top: 50%;display: table-cell;vertical-align: middle;}
+.VerticalSubContainer_7{*margin:-8px 0 0 0 }
+.widdent_w1{*margin:0 0 0 25px;}
+.widdent_w1 span.s3{*left: -5px; *top: 35%; *position: absolute;}
+.VerticalItem{ *position: relative;*top: -50%;}
+.VerticalSubContainer ul li {
+    list-style: none outside none;
+}
+.VerticalSubContainer *{_position:relative;}
+.productImgBtn{float:left;}
+.widdent_w3{ *position: absolute;*top: 50%; *left:344px;}
+.widdent_w4{ *position: absolute;*top: 50%; *left:507px;}
+.widdent_w5{ *position: absolute;*top: 50%; *left:603px;}
+.widdent_info{ *position: relative;}
+.orderinfo{*position:relative;*z-index:4;}
+.Comment0903 .SubmitOk input{*position:static!important;}
+.haiwaigouion{width: 33px !important;height: 23px !important;background: url(http://i1.vanclimg.com/cms/20161219/formshouer.jpg) no-repeat 0 0;}
+.haiwaigou_popup{  position: absolute;
+    margin: 0;
+    padding: 0;
+    margin-left: 30px;
+    margin-top: 5px;
+    width: 234px;
+    z-index:100;
+    display: none;}
+   .haiwaigou_write
+   {
+       border: #a20000 1px solid;
+        border-top: none;
+        width: 222px;
+        background-color: #fff;
+        height: auto;
+        padding: 5px;
+        word-wrap: break-word;
+        color:Black;
+        background-color:White;
+    }
+    .hwg_hidden{display:none;}
+    .haiwaigoubox:hover .haiwaigou_popup{display:block;}
+</style>
+
+
+<div id="confrim" style="display: none">
+</div>
+</div>
+    
+<a href="index.php?c=Home&a=index"><p class="time">首页</p></a>
+<input type="hidden" id="hidrel" value="my_order_recommendlist_">
+  <div class="myOrder_buyProductsBar" style=" margin-top:15px;height:450px">
+  
+     <div class="mv_RecommendedTitle">
+          <h3 class="titname" fid="titname">修改个人资料</h3>
+     </div>
+     <span class="blank20"></span>
+
+<div class="my_txt my_txt12 ">
+            <!--infor-->
+            <div class="nickname-panel nickname-panel12">
+                <div class="nickname-info member-info">
+                    <a id="anickname">您好！<em id="bNickName"><?=$arr['username']?></em></a>
+                    
+                </div>
+                
+                <div class="vjia vjia12" data-partner="False">
+                        <input type="hidden" id="Level" value="Common" />
+                        <input type="hidden" id="LevelMoney01" value="5000" />
+                        <input type="hidden" id="LevelMoney12" value="10000" />
+                        <input type="hidden" id="LevelSum" value="0.00" />
+                        <input type="hidden" id="LevelShunyan1" value="1000" />
+                        <input type="hidden" id="LevelShunyan2" value="2500" />
+                        <input type="hidden" id="LevelTotalSum" value="0" />
+                        <input type="hidden" id="EndTime" value="9989年12月31日" />
+                        <input type="hidden" id="EndTime2" value="9990年12月31日" />
+                    <span class="AsecuryMessage12" style="display: none;">消息提醒：<em>商品问答回复</em>（<a href="/question/index"><span
+                        id="spanReply">0</span></a>）<em class="mal1230">投诉/建议回复</em>（<a href="#"><span id="spanProposal">0</span></a>）</span></div>
+            </div>
+            <span class="blank0"></span>
+            <div class="txt2 txt212">
+                <span class="blank5"></span>
+                <ul class="orderStatusul12">
+                <form action="index.php?c=User&a=doSafe" method="post">
+                <input type="hidden" value="User" name="c">
+                <input type="hidden" value="doSafe" name="a">
+                <input type="hidden" value="<?=$_GET['id']?>" name="id">
+                    <li id="liOrderRelative" class="orderStatusli1201"></li>
+                        <li class="orderStatusli1202">用户名：<?=$arr['username']?></li>　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　
+                        　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　
+                    　　　　　　　　　　　　
+                    <li class="orderStatusli1202">密码：
+                            <input type="password" id="pwd0" name="pwd0" placeholder="原密码"><br>
+                            <input type="password" id="pwd" name="pwd" placeholder="新密码"><br>
+                            <input type="password" id="pwd2" name="pwd2" placeholder="确认新密码">
+                   
+                        </a></li>　　　　　　　　　　　　　　　　　　　　　　　　　　　　　
+                    
+                            <input class="time" type="submit" value="确认修改" >
+                </form>
+                </ul>
+                <span class="blank0"></span>
+            </div>
+            <div style="float: right;">
+                <img src="http://i4.vanclimg.com/cms/20140421/myvancl_weixin.png" alt="" titile="">
+            </div>
+            <span class="blank10"></span>
+        </div>
+        <span class="blank0"></span>
+    </div>
+
+     
+</div>
+<!--我的订单 为您推荐-->
+
+<input type="hidden" id="hidFormCodeM" value="0">
+<!--[if lte IE 6]><script type="text/javascript"> isIE6 = true;</script> <![endif]-->
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#MvcPager_Ctrl0_pib").css("width", "16px");
+        $("#User_Order_List").addClass("current"); //控制CSS
+        $("#UserMap").html("<a href='/order'>我的订单</a>"); //控制CSS
+        $("#MvcPager_Ctrl0_pib").css("width", "16px");
+        $("#posttime").val($("#posttime option:eq(0)").val());
+        if ($("#dingzhiType").val() == "dingzhi") {
+            getDingzhiOrderList(); //初始化订单列表
+            $("#UserMap").html("<a href='/order?type=dingzhi'>我的定制订单</a>"); //控制CSS
+        } else {
+            getLabelCount(); //初始化订单列表标签数量
+            getInitOrderList(); //初始化订单列表
+            getLabCommentProductCount();
+        }
+
+    });
+
+    function getDingzhiOrderList() {
+        $('#LoadingDiv').show();
+        var varsion = (Math.random() * 100000000).toString().substring(0, 6);
+        var url = "/order/CustomOrderList?id=1&ver=" + varsion;
+
+        //合并订单修改2012/10/23 start
+        if ($('#hidFormCodeM').val() != 0) {
+            url += "&formCodeM=" + $('#hidFormCodeM').val();
+        }
+        //合并订单修改2012/10/23 end
+
+        $.get(url, function (data) {
+            $("#orderlist").html(data);
+            $('#LoadingDiv').hide();
+        }
+        );
+    }
+
+
+    function getLabCommentProductCount() {
+        var url = "/Comment/AjaxGetCanCommentProductCount";
+        $.ajax({
+            type: "GET",
+            cache: false,
+            dataType: "json",
+            url: url,
+            success: function (data) {
+                if (data.success == true) {
+                    $("#myTab a").eq(4).find("span").html("").html("(<span>" + data.count + "</span>)")
+                }
+            }
+        });
+    }
+</script>
+<br>
+
+<script src="./Public/detail/js(3).ashx" type="text/javascript"></script>
+<script type="text/javascript" src="./Public/detail/js(4).ashx"></script>
+
+
+
+
+
+
+<div class="blank0" style="height:32px;"></div><div class="vanclFoot" style="margin-top:0px;"><div class="vanclCustomer publicfooterclear"><ul><li><a href="http://help.vancl.com/Home/contact" rel="nofollow" target="_blank"><p class="onlineCustomer"><img src="./Public/detail/onlinecustomer.png" style="width:auto;height:auto;"></p><p class="onlineTime"> 7X9小时在线客服</p></a></li><li><a href="http://help.vancl.com/Category/43-1.html" rel="nofollow" target="_blank"><p class="seven"><img src="./Public/detail/seven.png" style="width:auto;height:auto;"></p><p> 7天内退换货</p><p> 购物满199元免运费</p></a></li><li class="twocode"><p><img src="./Public/detail/2014_8_29_16_39_33_7709.jpg" style="width: 104px; height: 104px;"></p><p> 扫描下载<em>凡客</em>客户端</p></li></ul></div><div class="vanclOthers publicfooterclear"><ul><li><a href="http://www.vancl.com/help/about.htm" target="_blank">关于凡客</a></li><li><a href="http://help.vancl.com/Content/1.html" target="_blank">新手指南</a></li><li><a href="http://help.vancl.com/category/transfer" target="_blank">配送范围及时间</a></li><li><a href="http://help.vancl.com/Category/31-1.html" target="_blank">支付方式</a></li><li><a href="http://help.vancl.com/Category/43-1.html" target="_blank">售后服务</a></li><li class="none"><a href="http://help.vancl.com/" target="_blank">帮助中心</a></li></ul></div></div><div id="footerArea" class=""><div class="footBottom"><div class="footBottomTab"><p> Copyright 2007 - 2016 vancl.com All Rights Reserved 京ICP证100557号 京公网安备11011502002400号 出版物经营许可证新出发京批字第直110138号</p><p> 凡客诚品（北京）科技有限公司</p></div></div><span class="blank20"></span><div class="subFooter"><a rel="nofollow" href="https://search.szfw.org/cert/l/CX20111229001302001330" class="redLogo" target="_blank"></a><span class="costumeOrg"></span><a rel="nofollow" href="http://www.315online.com.cn/member/315090053.html" class="wsjyBzzx" target="_blank"></a><a rel="nofollow" href="http://www.hd315.gov.cn/beian/view.asp?bianhao=010202010081900017" class="vanclMsg" target="_blank"></a><a class="vanclqingNian" target="_blank" href="http://www.vancl.com/help/about_2.htm" rel="nofollow"></a><a href="http://trust.cctvmall.cn/reg/templates/brandtem1010.html" style="display: inline-block;" target="_blank"><img style="width: 120px; height: 39px;" src="./Public/detail/kexin_brand_for_others.png"></a><div class="blank0"></div></div></div><div class="BayWindow" style="position: fixed; right: 10px; bottom: 20px; z-index:10"><ul><li class="downApp"><a href="http://m.vancl.com/html/app.html#ref=hp-hp-head-mobile-v:n" target="_blank"></a></li><li class="online"><a href="http://imweb.vancl.com/" target="_blank"></a></li><li class="BlackTop"><a href="javascript:;" onclick="javascript:document.getElementById(&#39;headerTopArea&#39;).scrollIntoView()"></a></li></ul></div><script type="text/javascript"> $(document).ready(function () { var hostname = window.location.host; if (hostname != "demowww.vancl.com" && hostname != "www.vancl.com" && hostname != "www.fanke.com") { $(".subnavCon em").css({ display: "block" }); $(".subnavCon").hover(function () { $(this).find("em").addClass("emtop"); $(this).parent().find(".categoryList").show(); }, function () { $(this).find("em").removeClass("emtop"); $(this).parent().find(".categoryList").hide(); }); $(".categoryList").hover(function () { $(this).show(); }, function () { $(this).hide(); $(this).parent().find(".subnavCon em").removeClass("emtop"); }); } }); setTimeout(function () { var bp = document.createElement('script'); bp.src = '//push.zhanzhang.baidu.com/push.js'; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(bp, s); }, 1000); $(function () { $(".subNav").hide(); $(".navlist ul li").hover(function () { $(this).find(".subNav").stop(true, true); $(this).find(".subNav").slideDown(); }, function () { $(this).find(".subNav").stop(true, true); $(this).find(".subNav").slideUp(); }); })</script>    </div>
+    <div id="WeixinBox" style="position: fixed; bottom: 0px; z-index: 1000; width: 146px;">
+        <img src="./Public/detail/tc.png" alt="关闭" title="关闭" style="float:right;cursor:pointer;" onclick="closeWeixin();">
+        <span class="blank0"></span>
+        <img src="./Public/detail/vanclqrcode2.jpg" alt="凡客二维码" title="凡客二维码" style="width:144px;border:1px solid #EFEFEF;">
+        
+              
+    </div>
+    <script type="text/javascript" src="./Public/detail/js(5).ashx"></script>
+    
+
+
+<div id="imdiv" style="width:112px; height:25px; padding-top:3px;float:right; background:url(http://i.vanclimg.com/others/2011/11/9/bg.gif) center no-repeat; position:fixed;_position:absolute;_bottom:auto; right:0; bottom:0;_top:expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop,10)||0)-(parseInt(this.currentStyle.marginBottom,10)||0)))"><img hspace="6" src="./Public/detail/icon.gif" align="absmiddle"><a style="padding-right:8px;" href="http://imweb.vancl.com/" id="impage" target="_blank">在线客服</a><a href="http://my.vancl.com/Order/#"><img src="./Public/detail/top.gif" hspace="3" align="absmiddle"></a></div><img id="weblog_track" src="./Public/detail/track.aspx" style="display: none;"></body></html>

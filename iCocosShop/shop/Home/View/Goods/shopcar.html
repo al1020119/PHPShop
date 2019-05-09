@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+<head>
+    <title>购物车</title>    
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./Public/css/shoppingcar.css">
+     <link rel="icon" href="./Public/image/favicon.ico">
+</head>
+<body>
+    <div class="top">
+        <a class="logo" href="" title="凡客诚品">
+            <img alt="凡客诚品" src="./Public/image/slogo.png">
+        </a>
+        <div class="help-center">
+        <span><a href="index.php?c=Home&a=index">首页</a></span>
+            <span>您好，</span>
+            <a href=""><?=isset($_SESSION['username']['username'])?$_SESSION['username']['username']:''?></a>
+            <a href="index.php?c=Login&a=logout" class="user">退出登录</a> |
+            <a href="index.php?c=Login&a=index" class="user">更换用户</a>
+            <a href="">帮助中心</a>
+        </div>
+    </div>
+    <div class="location">
+        <span class="lc lc1">1.我的购物车</span>
+        <span class="lc">2.填写核对信息单</span>
+        <span class="lc">3.成功提交订单</span>
+    </div>
+    <div class="car">
+        <h2>我的购物车</h2>
+    </div>
+    <p class="wenxing">
+        <span class="wenxing">温馨提示：</span>
+        1.选购清单中的商品无法保留库存，请您及时结算。2.商品的价格和库存将以订单提交时为准。3.促销活动满减优惠将均摊至商品小计中。
+    </p>
+    <div class="shop-top">　
+        <span class="title">商品名称</span>
+        　　　　　　　　　　　　　　　　　　　　　　　　　<span class="title"><b>单价</b></span>
+        　　　　　　　　　　　　　
+        <span class="title3"><b>数量</b></span>
+        <span class="title3"><b>小计</b></span>
+        　　　　　
+        <span class="title"><b>操作</b></span>
+    </div>
+    <table>
+    <?php //var_dump($_SESSION);
+    $num = 0;
+    $total = 0;
+    if(isset($_SESSION['shopcar'])):
+    foreach($_SESSION['shopcar'] as $v):
+        $num +=$v['num'];
+        $total += $v['price']*$v['num'];
+    ?>
+        <tr>
+       
+        <td width='350'><a href="index.php?c=Goods&a=detail&id=<?=$v['id']?>"><img src="../Upload/<?=$v['pic']?>" width="100"></a><br>　　　<a href="index.php?c=Goods&a=detail&id=<?=$v['id']?>"><?=$v['name']?></a></td>
+        
+        <td width='300'><span class="price"><?=number_format($v['price'],2)?></span></td>
+        <td width='110'>
+            <a href="index.php?c=Goods&a=changeNum&id=<?=$v['id']?>&fu=jian" style="display:inline-block;padding:3px 7px;border:1px solid #f30">-</a>
+            <input type="text" size="2" value="<?=$v['num']?>">
+            <a href="index.php?c=Goods&a=changeNum&id=<?=$v['id']?>&fu=jia" style="display:inline-block;padding:3px 5px;border:1px solid #f30">+</a></td>    
+
+        <td width='120'><?=number_format($v['num']*$v['price'],2)?>元</td>
+        <td><a class="then" href="index.php?c=Goods&a=delShopcar&id=<?=$v['id']?>" onClick="return confirm('确定删除?');">删除</a></td>
+        </tr>
+    <?php endforeach;
+    endif;?>
+    </table>
+    <div class="under">
+        <div class="under-t">
+            　　<a class="then" href="index.php?c=Goods&a=delAll" onClick="return confirm('确定删除?');">删除全部</a>
+            <span class="slcont">数量总计：<?=$num?></sapn>
+        </div>
+        <div class="under-b">
+            <div>
+                <div class="jine left">产品金额总计(不含运费)：<font class="monney">￥<?=number_format($total,2)?>元</font>
+                </div>
+                <div class="right">
+                    <a class="then" href="index.php?c=Home&a=index">&lt;&lt;继续购物</a>
+                    <a href="index.php?c=Orders&a=add&t=<?=$num?>" class="go">去结算&gt;&gt;</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 页脚开始 -->
+    <div class="footer">
+        <p>Copyright 2007 - 2017 vancl.com All Rights Reserved 京ICP证100557号 京公网安备11010102000579号 出版物经营许可证新出发京批字第直110138号</p>
+    </div>
+    <div class="certs">
+        <a href=""><img src="./Public/image/dzsw.gif"></a>
+        <a href=""><img src="./Public/image/fzxh.gif"></a>
+        <a href=""><img src="./Public/image/bzzx.gif"></a>
+    </div>
+</body>
+</html>
